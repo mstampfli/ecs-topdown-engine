@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug MyRPGEngine",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/MyRPGEngine.exe", // Adjust to your executable
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build", // Working directory
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb", // Specify GDB
+            "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe", // Replace with your actual GDB path
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for GDB",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Build" // Ensure the project is built before debugging
+        }
+    ]
+}
