@@ -14,5 +14,7 @@ struct Size {
     float w, h;
 };
 
-
+struct Health {
+    std::uint32_t maxHealth, currentHealth;
+};
 

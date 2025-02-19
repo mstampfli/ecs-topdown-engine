@@ -1,0 +1,3 @@
+[submodule "graphicslib"]
+	path = graphicslib
+	url = https://github.com/mr-7code/visualCpp.git

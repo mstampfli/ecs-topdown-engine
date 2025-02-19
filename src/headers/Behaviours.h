@@ -15,3 +15,10 @@ public:
     void update(Entity entity, float dt) override;
 };
 
+class EnemyBehaviour : public EntityBehaviour {
+public:
+    void update(Entity entity, float dt) override;
+};
+
+
+

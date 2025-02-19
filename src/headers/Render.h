@@ -1,5 +1,11 @@
+#pragma once
+#include <vector>
+#include "Entity.h"
+
 void renderPlayers();
 
 void initRendering();
 
-void initEntityRectangles();
+void updateEntityRectangles();
+
+void sortEntitiesByYValue();

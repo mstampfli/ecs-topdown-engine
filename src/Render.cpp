@@ -2,6 +2,7 @@
 #include "headers/Render.h"
 #include "headers/Components.h"
 #include "headers/Entity.h"
+#include "headers/DeltaTime.h"
 #include <iostream>
 #include <cstdlib>
 #include <cmath>
@@ -14,56 +15,76 @@
 #include "headers/Systems.h"
 
 extern ResourceManager& rm;
+extern DeltaTime& dt;
 
-std::vector<Entity> sortEntitiesByYValue();
 void initRendering() {
     
-    rm.window.open(800, 600, "Window");
+    rm.window.open(1200, 800, "Window");
 
     rm.window.initializeOpenGL();
     rm.shaders["default"] = std::make_shared<Shader>("../graphicslib/shaders/texture/vertex.glsl", "../graphicslib/shaders/texture/fragment.glsl");
 
-    rm.window.setFramerate(60);
+    rm.window.setFramerate(120);
+
     glClearColor(0.3f, 0.5f, 0.1f, 1.0f);
     
     std::cout << "Initialised Window" << std::endl;
 
     rm.textures["player"] = std::make_shared<Texture>("../assets/textures/person.jpg");
+    rm.textures["default"] = std::make_shared<Texture>("../assets/textures/Download.jpg");
 
     std::cout << "Loaded Shader and texture" << std::endl;
 }
 
-void initEntityRectangles() {
+void updateEntityRectangles() {
     for (Entity entity : rm.entityManager.getEntities()) {
-        Mesh* mesh = createRectangle();
-        
-        rm.meshComponents[entity] = std::make_unique<Mesh>(*mesh);
+        // If mesh does not exist, create it
+        if (rm.meshComponents.find(entity) == rm.meshComponents.end()) {
+            rm.meshComponents[entity] = std::make_unique<Mesh>(*createRectangle());
+        }
 
+        Mesh* mesh = rm.meshComponents[entity].get();  // Get the existing mesh
+
+        // Update shader uniforms
         if (rm.shaderComponents.find(entity) != rm.shaderComponents.end()) {
             (*mesh).getUniforms((*rm.shaderComponents[entity]).shaderProgram);
         } else {
             (*mesh).getUniforms((*rm.shaders["default"]).shaderProgram);
         }
 
-        float* pos = rm.window.toOpenGLCoordinates(rm.positionComponents[entity].x + rm.sizeComponents[entity].w / 2, rm.positionComponents[entity].y + rm.sizeComponents[entity].h / 2); //Pos + size / 2 since origin is centered
+        // Update mesh position & size
+        float* pos = rm.window.toOpenGLCoordinates(
+            (*rm.positionComponents[entity]).x + (*rm.sizeComponents[entity]).w / 2, 
+            (*rm.positionComponents[entity]).y + (*rm.sizeComponents[entity]).h / 2
+        );
         (*mesh).x = pos[0];
         (*mesh).y = pos[1];
         delete[] pos;
-        float* size = rm.window.toOpenGLSize(rm.sizeComponents[entity].w, rm.sizeComponents[entity].h);
+
+        float* size = rm.window.toOpenGLSize(
+            (*rm.sizeComponents[entity]).w, 
+            (*rm.sizeComponents[entity]).h
+        );
+
         (*mesh).w = size[0];
         (*mesh).h = size[1];
         delete[] size;
+
+        // Update transformation matrices
         (*mesh).updateModelMatrix();
         (*mesh).loadModelMatrix();
-    }  
+    }
 }
 
 void renderPlayers() {
-    initEntityRectangles();
 
+    updateEntityRectangles();
     glClear(GL_COLOR_BUFFER_BIT);
+    sortEntitiesByYValue();
 
-    for (auto& entity : sortEntitiesByYValue()) {
+    float deltaTime = dt.getDeltaTime();
+
+    for (auto& entity : rm.sortedDrawEntities) {
         if (rm.textureComponents.find(entity) != rm.textureComponents.end()) {
             (*rm.textureComponents[entity]).bind(0);
         } else {
@@ -78,26 +99,25 @@ void renderPlayers() {
             glUniform1i(glGetUniformLocation((*rm.shaders["default"]).shaderProgram, "tex"), 0);
         }
 
-        (*rm.behaviours[entity]).update(entity, 1.0f);
+        (*rm.meshComponents[entity]).updateModelMatrix();
+        (*rm.meshComponents[entity]).loadModelMatrix();
         (*rm.meshComponents[entity]).draw();
+        (*rm.behaviours[entity]).update(entity, deltaTime);
     }
-
-    updateMovement(1.0f);
+    rm.eventSystem.update(deltaTime);
+    rm.movementSystem.update(deltaTime);
+    rm.combatSystem.update(deltaTime);
 }
 
-std::vector<Entity> sortEntitiesByYValue() {
-    std::vector<Entity> sortedEntities;
+void sortEntitiesByYValue() {
+    rm.sortedDrawEntities.clear();
 
-    for (const auto& entity : rm.entityManager.getEntities()) {
-        sortedEntities.push_back(entity);
+    for (auto& entity : rm.entityManager.getEntities()) {
+        rm.sortedDrawEntities.push_back(entity);
     }
-    
-    // Sort entities from highest `y` to lowest
-    std::sort(sortedEntities.begin(), sortedEntities.end(), 
+    std::stable_sort(rm.sortedDrawEntities.begin(), rm.sortedDrawEntities.end(), 
         [](Entity a, Entity b) {
-            return rm.positionComponents[a].y > rm.positionComponents[b].y;  
+            return (*rm.positionComponents[a]).y < (*rm.positionComponents[b]).y;
         }
     );
-
-    return sortedEntities;
 }
