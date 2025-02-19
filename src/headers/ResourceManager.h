@@ -18,7 +18,6 @@ public:
     std::unordered_map<Entity, Velocity> velocityComponents;
     std::unordered_map<Entity, Size> sizeComponents;
     std::unordered_map<Entity, std::shared_ptr<EntityBehaviour>> behaviours;
-    std::vector<Mesh*> drawObjects;
     EntityManager entityManager;
 
     std::unordered_map<std::string, std::shared_ptr<Texture>> textures;
