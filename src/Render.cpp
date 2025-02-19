@@ -55,13 +55,10 @@ void initEntityRectangles() {
         delete[] size;
         (*mesh).updateModelMatrix();
         (*mesh).loadModelMatrix();
-
-        rm.drawObjects.push_back(mesh);
     }  
 }
 
 void renderPlayers() {
-    rm.drawObjects.clear();
     initEntityRectangles();
 
     glClear(GL_COLOR_BUFFER_BIT);
