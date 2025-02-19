@@ -17,7 +17,9 @@ void PlayerBehaviour::update(Entity entity, float dt) {
         rm.velocityComponents[entity].vx = 0; 
         rm.velocityComponents[entity].vy = 0;
 
-        if (GetAsyncKeyState('W')) rm.velocityComponents[entity].vy = -speed;
+        if (GetAsyncKeyState('W')) {
+            rm.velocityComponents[entity].vy = -speed;
+        }
         if (GetAsyncKeyState('A')) rm.velocityComponents[entity].vx = -speed;
         if (GetAsyncKeyState('S')) rm.velocityComponents[entity].vy = speed;
         if (GetAsyncKeyState('D')) rm.velocityComponents[entity].vx = speed;

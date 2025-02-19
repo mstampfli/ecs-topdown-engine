@@ -14,15 +14,19 @@ class ResourceManager {
 public:
     static ResourceManager& getInstance(); // Singleton access
     Window window;
-    std::unordered_map<std::string, Shader> shaders; // Store loaded shaders
     std::unordered_map<Entity, Position> positionComponents;
     std::unordered_map<Entity, Velocity> velocityComponents;
     std::unordered_map<Entity, Size> sizeComponents;
-    std::unordered_map<Entity, std::unique_ptr<EntityBehaviour>> behaviours;
+    std::unordered_map<Entity, std::shared_ptr<EntityBehaviour>> behaviours;
     std::vector<Mesh*> drawObjects;
     EntityManager entityManager;
-    std::unique_ptr<Shader> shader; 
-    std::unique_ptr<Texture> texture;
+
+    std::unordered_map<std::string, std::shared_ptr<Texture>> textures;
+    std::unordered_map<std::string, std::shared_ptr<Shader>> shaders;
+  
+    std::unordered_map<Entity, std::shared_ptr<Shader>> shaderComponents;
+    std::unordered_map<Entity, std::shared_ptr<Texture>> textureComponents;
+    std::unordered_map<Entity, std::unique_ptr<Mesh>> meshComponents;
 
 
 private:

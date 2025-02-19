@@ -25,21 +25,19 @@ int main() {
     rm.velocityComponents[player] = { 0, 0 };
     rm.sizeComponents[player] = {50, 50};
 
-    rm.behaviours[player] = std::make_unique<PlayerBehaviour>();
+    rm.behaviours[player] = std::make_shared<PlayerBehaviour>();
+    
+    initRendering();
+
+    rm.textureComponents[player] = rm.textures["player"];
 
     rm.window.updateFunction = renderPlayers;
-
-    initRendering();
     
     rm.window.run();
 
     std::cin.get();
 
     rm.window.close();
-
-    for (Mesh* mesh : rm.drawObjects) {
-        delete mesh;
-    }
 
     return 0;
 }

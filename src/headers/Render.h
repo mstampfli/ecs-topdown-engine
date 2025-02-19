@@ -1,4 +1,3 @@
-
 void renderPlayers();
 
 void initRendering();
