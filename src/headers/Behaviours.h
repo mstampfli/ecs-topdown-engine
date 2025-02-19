@@ -15,4 +15,3 @@ public:
     void update(Entity entity, float dt) override;
 };
 
-extern std::unordered_map<Entity, std::unique_ptr<EntityBehaviour>> behaviours;

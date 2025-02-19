@@ -10,5 +10,7 @@ struct Velocity {
     float vx = 0, vy = 0;
 };
 
-extern std::unordered_map<Entity, Position> positionComponents;
-extern std::unordered_map<Entity, Velocity> velocityComponents;
+struct Size {
+    float w, h;
+};
+

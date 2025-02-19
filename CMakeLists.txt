@@ -23,6 +23,26 @@ add_executable(MyRPGEngine ${MAIN_FILE} ${SOURCES})
 # Ensure headers are included
 include_directories(${HEADERS_DIR})
 
+target_include_directories(MyRPGEngine PRIVATE 
+    ${CMAKE_SOURCE_DIR}/graphicslib/src
+    ${CMAKE_SOURCE_DIR}/graphicslib/libraries/include
+    ${CMAKE_SOURCE_DIR}/graphicslib/shaders
+)
+
+link_directories(${CMAKE_SOURCE_DIR}/graphicslib/libraries/lib)
+link_directories(${CMAKE_SOURCE_DIR}/graphicslib/build)
+
+set(GRAPHICSLIB_A "${CMAKE_SOURCE_DIR}/graphicslib/build/libgraphicslib.a")
+set(GLFW_A "${CMAKE_SOURCE_DIR}/graphicslib/libraries/lib/libglfw3.a")
+set(GLAD_A "${CMAKE_SOURCE_DIR}/graphicslib/libraries/lib/libglad.a")
+
+# ✅ Link with prebuilt `libgraphicslib.a`, `glfw3.a`, and `glad.a`
+target_link_libraries(MyRPGEngine PRIVATE 
+    ${GRAPHICSLIB_A}  # Directly link graphicslib.a
+    ${GLFW_A}         # Link glfw3.a with full path
+    ${GLAD_A}         # Link glad.a with full path
+)
+
 # Set output binary to build/bin/
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 

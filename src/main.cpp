@@ -3,26 +3,49 @@
 #include "headers/Entity.h"
 #include "headers/Systems.h"
 #include "headers/Render.h"
+#include "headers/ResourceManager.h"
+
+#include "../graphicslib/src/Window.h" 
+#include "../graphicslib/src/Shader.h" 
+#include "../graphicslib/src/Mesh.h" 
+#include "../graphicslib/src/Texture.h"
+
+#include <iostream>
+#include <vector>
+
+
+
+ResourceManager& rm = ResourceManager::getInstance();
+
 
 int main() {
-    EntityManager entityManager;
 
-    Entity player = entityManager.createEntity();
-    positionComponents[player] = { 0, 0 };
-    velocityComponents[player] = { 0, 0 };
+    Entity player = rm.entityManager.createEntity();
+    rm.positionComponents[player] = { 0, 0 };
+    rm.velocityComponents[player] = { 0, 0 };
+    rm.sizeComponents[player] = {50, 50};
 
-    behaviours[player] = std::make_unique<PlayerBehaviour>();
+    rm.behaviours[player] = std::make_unique<PlayerBehaviour>();
 
-    while (true) {
-        for (auto& [entity, behaviour] : behaviours) {
-            behaviour->update(entity, 1.0f);
-        }
+    rm.window.updateFunction = renderPlayers;
 
-        updateMovement(1.0f);
+    initRendering();
+    
+    rm.window.run();
 
-        renderPlayers();
+    std::cin.get();
+
+    rm.window.close();
+
+    for (Mesh* mesh : rm.drawObjects) {
+        delete mesh;
     }
 
     return 0;
-
 }
+
+
+
+
+
+

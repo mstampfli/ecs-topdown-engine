@@ -86,6 +86,7 @@
         "codecvt": "cpp",
         "fstream": "cpp",
         "filesystem": "cpp",
-        "forward_list": "cpp"
+        "forward_list": "cpp",
+        "unordered_set": "cpp"
     } // Use MinGW Makefiles for your toolchain
 }

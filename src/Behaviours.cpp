@@ -2,23 +2,24 @@
 #include "headers/Entity.h"
 #include "headers/Components.h"
 #include "headers/Systems.h"
+#include "headers/ResourceManager.h"
 
 #include <windows.h>
 #include <iostream>
 
-std::unordered_map<Entity, std::unique_ptr<EntityBehaviour>> behaviours;
+extern ResourceManager& rm;
 
 void PlayerBehaviour::update(Entity entity, float dt) {
-    if (velocityComponents.find(entity) != velocityComponents.end()) {
+    if (rm.velocityComponents.find(entity) != rm.velocityComponents.end()) {
         
         float speed = 5.0f;
 
-        velocityComponents[entity].vx = 0; 
-        velocityComponents[entity].vy = 0;
+        rm.velocityComponents[entity].vx = 0; 
+        rm.velocityComponents[entity].vy = 0;
 
-        if (GetAsyncKeyState('W')) velocityComponents[entity].vy = -speed;
-        if (GetAsyncKeyState('A')) velocityComponents[entity].vx = -speed;
-        if (GetAsyncKeyState('S')) velocityComponents[entity].vy = speed;
-        if (GetAsyncKeyState('D')) velocityComponents[entity].vx = speed;
+        if (GetAsyncKeyState('W')) rm.velocityComponents[entity].vy = -speed;
+        if (GetAsyncKeyState('A')) rm.velocityComponents[entity].vx = -speed;
+        if (GetAsyncKeyState('S')) rm.velocityComponents[entity].vy = speed;
+        if (GetAsyncKeyState('D')) rm.velocityComponents[entity].vx = speed;
     }
 }

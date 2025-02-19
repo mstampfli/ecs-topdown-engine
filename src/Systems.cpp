@@ -1,12 +1,15 @@
 #include "headers/Systems.h"
 #include "headers/Entity.h"
 #include "headers/Components.h"
+#include "headers/ResourceManager.h"
+
+extern ResourceManager& rm;
 
 void updateMovement(float dt) {
-    for (auto& [entity, velocity] : velocityComponents) {
-        if (positionComponents.find(entity) != positionComponents.end()) {
-            positionComponents[entity].x += velocity.vx * dt;
-            positionComponents[entity].y += velocity.vy * dt;
+    for (auto& [entity, velocity] : rm.velocityComponents) {
+        if (rm.positionComponents.find(entity) != rm.positionComponents.end()) {
+            rm.positionComponents[entity].x += velocity.vx * dt;
+            rm.positionComponents[entity].y += velocity.vy * dt;
         }
     }
 }
