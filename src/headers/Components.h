@@ -18,3 +18,12 @@ struct Health {
     std::uint32_t maxHealth, currentHealth;
 };
 
+enum class EntityType {
+    PLAYER,
+    ENEMY,
+    NPC
+};
+
+struct TypeComponent {
+    EntityType type;
+};

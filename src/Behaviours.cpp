@@ -17,8 +17,8 @@ void PlayerBehaviour::update(Entity entity, float dt) {
         float xSpeed = 0.0f;
         float ySpeed = 0.0f;
 
-        (*rm.velocityComponents[entity]).vx = 0; 
-        (*rm.velocityComponents[entity]).vy = 0;
+        rm.velocityComponents[entity].vx = 0; 
+        rm.velocityComponents[entity].vy = 0;
 
         if (GetAsyncKeyState('W')) ySpeed = -speed;
         if (GetAsyncKeyState('A')) xSpeed = -speed;
@@ -27,8 +27,8 @@ void PlayerBehaviour::update(Entity entity, float dt) {
 
         float vectorLength = std::sqrt(xSpeed * xSpeed + ySpeed * ySpeed);
         if (vectorLength > 0.01f) {
-            (*rm.velocityComponents[entity]).vx = xSpeed / vectorLength * speed;
-            (*rm.velocityComponents[entity]).vy = ySpeed / vectorLength * speed;
+            rm.velocityComponents[entity].vx = xSpeed / vectorLength * speed;
+            rm.velocityComponents[entity].vy = ySpeed / vectorLength * speed;
         } 
     }
 }
@@ -38,8 +38,9 @@ void EnemyBehaviour::update(Entity entity, float dt) {
         
         float speed = 100.0f;
 
-        float xDistance = (*rm.positionComponents[rm.player]).x - (*rm.positionComponents[entity]).x;
-        float yDistance = (*rm.positionComponents[rm.player]).y - (*rm.positionComponents[entity]).y;
+        
+        float xDistance = rm.positionComponents[rm.player].x - rm.positionComponents[entity].x;
+        float yDistance = rm.positionComponents[rm.player].y - rm.positionComponents[entity].y;
 
         float vectorLength = std::sqrt(xDistance * xDistance + yDistance * yDistance);
 
@@ -48,11 +49,11 @@ void EnemyBehaviour::update(Entity entity, float dt) {
             float normY = yDistance / vectorLength; // Normalize y
             
             // Apply velocity in the direction of the player
-            (*rm.velocityComponents[entity]).vx = normX * speed;
-            (*rm.velocityComponents[entity]).vy = normY * speed;
+            rm.velocityComponents[entity].vx = normX * speed;
+            rm.velocityComponents[entity].vy = normY * speed;
         } else {
-            (*rm.velocityComponents[entity]).vx = 0; 
-            (*rm.velocityComponents[entity]).vy = 0;
+            rm.velocityComponents[entity].vx = 0; 
+            rm.velocityComponents[entity].vy = 0;
         }
 
     } 

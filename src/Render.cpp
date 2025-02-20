@@ -54,16 +54,16 @@ void updateEntityRectangles() {
 
         // Update mesh position & size
         float* pos = rm.window.toOpenGLCoordinates(
-            (*rm.positionComponents[entity]).x + (*rm.sizeComponents[entity]).w / 2, 
-            (*rm.positionComponents[entity]).y + (*rm.sizeComponents[entity]).h / 2
+            rm.positionComponents[entity].x + rm.sizeComponents[entity].w / 2, 
+            rm.positionComponents[entity].y + rm.sizeComponents[entity].h / 2
         );
         (*mesh).x = pos[0];
         (*mesh).y = pos[1];
         delete[] pos;
 
         float* size = rm.window.toOpenGLSize(
-            (*rm.sizeComponents[entity]).w, 
-            (*rm.sizeComponents[entity]).h
+            rm.sizeComponents[entity].w, 
+            rm.sizeComponents[entity].h
         );
 
         (*mesh).w = size[0];
@@ -84,7 +84,7 @@ void renderPlayers() {
 
     float deltaTime = dt.getDeltaTime();
 
-    for (auto& entity : rm.sortedDrawEntities) {
+    for (auto entity : rm.sortedDrawEntities) {
         if (rm.textureComponents.find(entity) != rm.textureComponents.end()) {
             (*rm.textureComponents[entity]).bind(0);
         } else {
@@ -104,9 +104,10 @@ void renderPlayers() {
         (*rm.meshComponents[entity]).draw();
         (*rm.behaviours[entity]).update(entity, deltaTime);
     }
-    rm.eventSystem.update(deltaTime);
+    rm.eventSystem.update();
     rm.movementSystem.update(deltaTime);
     rm.combatSystem.update(deltaTime);
+    rm.statusSystem.update(deltaTime);
 }
 
 void sortEntitiesByYValue() {
@@ -117,7 +118,7 @@ void sortEntitiesByYValue() {
     }
     std::stable_sort(rm.sortedDrawEntities.begin(), rm.sortedDrawEntities.end(), 
         [](Entity a, Entity b) {
-            return (*rm.positionComponents[a]).y < (*rm.positionComponents[b]).y;
+            return rm.positionComponents[a].y < rm.positionComponents[b].y;
         }
     );
 }

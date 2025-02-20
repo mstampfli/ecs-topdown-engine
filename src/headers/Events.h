@@ -9,6 +9,7 @@ public:
     EntityEvent(Entity attacker, Entity target) 
         : attacker(attacker), target(target) {}
 
+    virtual void process() = 0; 
     virtual ~EntityEvent() = default; // Ensure proper cleanup
 };
 
@@ -18,4 +19,6 @@ public:
 
     DamageEvent(Entity attacker, Entity target, float damage) 
         : EntityEvent(attacker, target), damageAmount(damage) {}
+
+    void process() override;
 };

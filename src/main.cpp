@@ -19,27 +19,30 @@
 ResourceManager& rm = ResourceManager::getInstance();
 DeltaTime& dt = DeltaTime::getInstance();
 
+
 int main() {
 
     rm.player = rm.entityManager.createEntity();
-    rm.positionComponents[rm.player] = std::make_shared<Position>(Position{0, 0});
-    rm.velocityComponents[rm.player] = std::make_shared<Velocity>(Velocity{0, 0});
-    rm.healthComponents[rm.player] = std::make_shared<Health>(Health{100, 100});
-    rm.sizeComponents[rm.player] = std::make_shared<Size>(Size{50, 50});
+    rm.positionComponents[rm.player] = {0, 0};
+    rm.velocityComponents[rm.player] = {0, 0};
+    rm.healthComponents[rm.player] = {100, 100};
+    rm.sizeComponents[rm.player] = {50, 50};
     rm.behaviours[rm.player] = std::make_shared<PlayerBehaviour>();
+    rm.typeComponents[rm.player] = std::make_shared<TypeComponent>(TypeComponent{EntityType::PLAYER});
 
     Entity enemy = rm.entityManager.createEntity();
-    rm.positionComponents[enemy] = std::make_shared<Position>(Position{200, 200});
-    rm.velocityComponents[enemy] = std::make_shared<Velocity>(Velocity{0, 0});
-    rm.healthComponents[enemy] = std::make_shared<Health>(Health{100, 100});
-    rm.sizeComponents[enemy] = std::make_shared<Size>(Size{50, 50});
+    rm.positionComponents[enemy] = {200, 200};
+    rm.velocityComponents[enemy] = {0, 0};
+    rm.healthComponents[enemy] = {100, 100};
+    rm.sizeComponents[enemy] = {50, 50};
     rm.behaviours[enemy] = std::make_shared<EnemyBehaviour>();
+    rm.typeComponents[enemy] = std::make_shared<TypeComponent>(TypeComponent{EntityType::ENEMY});
     
     initRendering();
 
-    rm.textureComponents[rm.player] = rm.textures["player"];
+    rm.textureComponents[rm.player] = rm.textures["player"].get();
 
-    rm.textureComponents[enemy] = rm.textures["player"];
+    rm.textureComponents[enemy] = rm.textures["player"].get();
 
     rm.window.updateFunction = renderPlayers;
     

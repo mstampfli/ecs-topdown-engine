@@ -15,24 +15,27 @@ class ResourceManager {
 public:
     static ResourceManager& getInstance(); // Singleton access
     Window window;
-    std::unordered_map<Entity, std::shared_ptr<Position>> positionComponents;
-    std::unordered_map<Entity, std::shared_ptr<Velocity>> velocityComponents;
-    std::unordered_map<Entity, std::shared_ptr<Size>> sizeComponents;
+    std::unordered_map<Entity, Position> positionComponents;
+    std::unordered_map<Entity, Velocity> velocityComponents;
+    std::unordered_map<Entity, Size> sizeComponents;
+    std::unordered_map<Entity, Health> healthComponents;
     std::unordered_map<Entity, std::shared_ptr<EntityBehaviour>> behaviours;
+    std::unordered_map<Entity, std::shared_ptr<TypeComponent>> typeComponents;
+
+    std::unordered_map<Entity, Shader*> shaderComponents;
+    std::unordered_map<Entity, Texture*> textureComponents;
+    std::unordered_map<Entity, std::unique_ptr<Mesh>> meshComponents;
+
+    std::unordered_map<std::string, std::shared_ptr<Texture>> textures;
+    std::unordered_map<std::string, std::shared_ptr<Shader>> shaders;
+
     EntityManager entityManager;
 
     Entity player;
     MovementSystem movementSystem;
     EventSystem eventSystem;
     CombatSystem combatSystem;
-
-    std::unordered_map<std::string, std::shared_ptr<Texture>> textures;
-    std::unordered_map<std::string, std::shared_ptr<Shader>> shaders;
-  
-    std::unordered_map<Entity, std::shared_ptr<Shader>> shaderComponents;
-    std::unordered_map<Entity, std::shared_ptr<Texture>> textureComponents;
-    std::unordered_map<Entity, std::shared_ptr<Health>> healthComponents;
-    std::unordered_map<Entity, std::unique_ptr<Mesh>> meshComponents;
+    StatusSystem statusSystem;
 
     std::vector<Entity> sortedDrawEntities;
 
