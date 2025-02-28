@@ -88,6 +88,7 @@
         "filesystem": "cpp",
         "forward_list": "cpp",
         "unordered_set": "cpp",
-        "typeindex": "cpp"
+        "typeindex": "cpp",
+        "internal.h": "c"
     } // Use MinGW Makefiles for your toolchain
 }

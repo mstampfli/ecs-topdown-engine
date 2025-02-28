@@ -62,13 +62,13 @@ CMAKE_BINARY_DIR = C:\Users\ur2ba\OneDrive\Desktop\ECS-OOP-TopDown-GameEngine\bu
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/MyRPGEngine.dir/all
-all: CMakeFiles/MyRPGGame.dir/all
+all: CMakeFiles/gameengine.dir/all
+all: CMakeFiles/GameEngineExecutable.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/MyRPGEngine.dir/codegen
-codegen: CMakeFiles/MyRPGGame.dir/codegen
+codegen: CMakeFiles/gameengine.dir/codegen
+codegen: CMakeFiles/GameEngineExecutable.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -76,73 +76,73 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/MyRPGEngine.dir/clean
-clean: CMakeFiles/MyRPGGame.dir/clean
+clean: CMakeFiles/gameengine.dir/clean
+clean: CMakeFiles/GameEngineExecutable.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/MyRPGEngine.dir
+# Target rules for target CMakeFiles/gameengine.dir
 
 # All Build rule for target.
-CMakeFiles/MyRPGEngine.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGEngine.dir\build.make CMakeFiles/MyRPGEngine.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGEngine.dir\build.make CMakeFiles/MyRPGEngine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ur2ba\OneDrive\Desktop\ECS-OOP-TopDown-GameEngine\build\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target MyRPGEngine"
-.PHONY : CMakeFiles/MyRPGEngine.dir/all
+CMakeFiles/gameengine.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ur2ba\OneDrive\Desktop\ECS-OOP-TopDown-GameEngine\build\CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45 "Built target gameengine"
+.PHONY : CMakeFiles/gameengine.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/MyRPGEngine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ur2ba\OneDrive\Desktop\ECS-OOP-TopDown-GameEngine\build\CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/MyRPGEngine.dir/all
+CMakeFiles/gameengine.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ur2ba\OneDrive\Desktop\ECS-OOP-TopDown-GameEngine\build\CMakeFiles 43
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/gameengine.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ur2ba\OneDrive\Desktop\ECS-OOP-TopDown-GameEngine\build\CMakeFiles 0
-.PHONY : CMakeFiles/MyRPGEngine.dir/rule
+.PHONY : CMakeFiles/gameengine.dir/rule
 
 # Convenience name for target.
-MyRPGEngine: CMakeFiles/MyRPGEngine.dir/rule
-.PHONY : MyRPGEngine
+gameengine: CMakeFiles/gameengine.dir/rule
+.PHONY : gameengine
 
 # codegen rule for target.
-CMakeFiles/MyRPGEngine.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGEngine.dir\build.make CMakeFiles/MyRPGEngine.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ur2ba\OneDrive\Desktop\ECS-OOP-TopDown-GameEngine\build\CMakeFiles --progress-num=1,2,3,4,5,6 "Finished codegen for target MyRPGEngine"
-.PHONY : CMakeFiles/MyRPGEngine.dir/codegen
+CMakeFiles/gameengine.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ur2ba\OneDrive\Desktop\ECS-OOP-TopDown-GameEngine\build\CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45 "Finished codegen for target gameengine"
+.PHONY : CMakeFiles/gameengine.dir/codegen
 
 # clean rule for target.
-CMakeFiles/MyRPGEngine.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGEngine.dir\build.make CMakeFiles/MyRPGEngine.dir/clean
-.PHONY : CMakeFiles/MyRPGEngine.dir/clean
+CMakeFiles/gameengine.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/clean
+.PHONY : CMakeFiles/gameengine.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/MyRPGGame.dir
+# Target rules for target CMakeFiles/GameEngineExecutable.dir
 
 # All Build rule for target.
-CMakeFiles/MyRPGGame.dir/all: CMakeFiles/MyRPGEngine.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGGame.dir\build.make CMakeFiles/MyRPGGame.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGGame.dir\build.make CMakeFiles/MyRPGGame.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ur2ba\OneDrive\Desktop\ECS-OOP-TopDown-GameEngine\build\CMakeFiles --progress-num=7,8 "Built target MyRPGGame"
-.PHONY : CMakeFiles/MyRPGGame.dir/all
+CMakeFiles/GameEngineExecutable.dir/all: CMakeFiles/gameengine.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngineExecutable.dir\build.make CMakeFiles/GameEngineExecutable.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngineExecutable.dir\build.make CMakeFiles/GameEngineExecutable.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ur2ba\OneDrive\Desktop\ECS-OOP-TopDown-GameEngine\build\CMakeFiles --progress-num=1,2 "Built target GameEngineExecutable"
+.PHONY : CMakeFiles/GameEngineExecutable.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/MyRPGGame.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ur2ba\OneDrive\Desktop\ECS-OOP-TopDown-GameEngine\build\CMakeFiles 8
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/MyRPGGame.dir/all
+CMakeFiles/GameEngineExecutable.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ur2ba\OneDrive\Desktop\ECS-OOP-TopDown-GameEngine\build\CMakeFiles 45
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/GameEngineExecutable.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ur2ba\OneDrive\Desktop\ECS-OOP-TopDown-GameEngine\build\CMakeFiles 0
-.PHONY : CMakeFiles/MyRPGGame.dir/rule
+.PHONY : CMakeFiles/GameEngineExecutable.dir/rule
 
 # Convenience name for target.
-MyRPGGame: CMakeFiles/MyRPGGame.dir/rule
-.PHONY : MyRPGGame
+GameEngineExecutable: CMakeFiles/GameEngineExecutable.dir/rule
+.PHONY : GameEngineExecutable
 
 # codegen rule for target.
-CMakeFiles/MyRPGGame.dir/codegen: CMakeFiles/MyRPGEngine.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGGame.dir\build.make CMakeFiles/MyRPGGame.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ur2ba\OneDrive\Desktop\ECS-OOP-TopDown-GameEngine\build\CMakeFiles --progress-num=7,8 "Finished codegen for target MyRPGGame"
-.PHONY : CMakeFiles/MyRPGGame.dir/codegen
+CMakeFiles/GameEngineExecutable.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngineExecutable.dir\build.make CMakeFiles/GameEngineExecutable.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ur2ba\OneDrive\Desktop\ECS-OOP-TopDown-GameEngine\build\CMakeFiles --progress-num=1,2 "Finished codegen for target GameEngineExecutable"
+.PHONY : CMakeFiles/GameEngineExecutable.dir/codegen
 
 # clean rule for target.
-CMakeFiles/MyRPGGame.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGGame.dir\build.make CMakeFiles/MyRPGGame.dir/clean
-.PHONY : CMakeFiles/MyRPGGame.dir/clean
+CMakeFiles/GameEngineExecutable.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngineExecutable.dir\build.make CMakeFiles/GameEngineExecutable.dir/clean
+.PHONY : CMakeFiles/GameEngineExecutable.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

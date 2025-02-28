@@ -1,1 +1,0 @@
- lib/libMyRPGEngine.a "C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/builtgraphicslib/lib/libgraphicslib.a" "C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/soloud/lib/libsoloud.a" -lwinmm -lgdi32 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

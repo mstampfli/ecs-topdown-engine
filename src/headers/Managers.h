@@ -13,23 +13,47 @@
 #include <vector>
 #include <algorithm>
 #include <typeindex>
+#include <unordered_map>
+#include <unordered_set>
 
-#include "../../soloud/include/soloud.h"
-#include "../../soloud/include/soloud_wav.h"
+#include "../../libraries/soloud/include/soloud.h"
+#include "../../libraries/soloud/include/soloud_wav.h"
 
-/*#include "../../graphicslib/src/Shader.h"
-#include "../../graphicslib/src/Window.h"
-#include "../../graphicslib/src/Texture.h"
-#include "../../graphicslib/src/Renderer.h"*/
+#include "../../libraries/graphicslib/include/Shader.h"
+#include "../../libraries/graphicslib/include/Window.h"
+#include "../../libraries/graphicslib/include/Texture.h"
+#include "../../libraries/graphicslib/include/Renderer.h"
 
 using EntityType = std::uint32_t;
 
-/*class RenderManager : Renderer{
+class InputManager {
 public:
+    InputManager() = default;
+    ~InputManager() = default;
 
-    void testFunction();
-    RenderManager(Window* window) : Renderer(window) {}
-};*/
+    void update();
+    bool isKeyDown(int key);
+    bool isKeyUp(int key);
+    bool isKeyPressed(int key);
+    bool isKeyReleased(int key);
+
+    void initialize(Window* window);
+
+protected:
+    Window* window;
+    std::unordered_map<int, bool> currentInputs;
+    std::unordered_set<int> newInputs;
+    std::unordered_set<int> endedInputs;
+
+    void storeKeyInputs(int key, int action);
+    static void keyCallBack(GLFWwindow* window, int key, int scancode, int action, int mods);
+};
+
+class RenderManager : public Renderer{
+public:
+    Window* window;
+    RenderManager(Window* window) : Renderer(window), window(window) {}
+};
 
 class AudioManager {
 public:
@@ -94,14 +118,14 @@ protected:
     std::unordered_map<std::type_index, std::vector<std::function<void(const Event&)>>> subscribers;
 };
     
-class EntityManager : public std::enable_shared_from_this<EntityManager>{
+class EntityManager {
 public:
 
     void setSize(Entity entity, const Size& size);
     const Size* getSize(Entity entity);
 
-    void setBehaviour(Entity entity, std::shared_ptr<EntityBehaviour> behaviour);
-    const std::shared_ptr<EntityBehaviour> getBehaviour(Entity entity);
+    void setBehaviour(Entity entity, EntityBehaviour* behaviour);
+    const EntityBehaviour* getBehaviour(Entity entity);
 
     void setType(Entity entity, EntityType type);
     const EntityType* getType(Entity entity);
@@ -130,15 +154,11 @@ public:
 
 protected:
 
-    std::shared_ptr<EntityManager> getSharedPtr() {
-        return shared_from_this(); 
-    }
-
     Entity player;
     std::unordered_map<Entity, Position> positionComponents;
     std::unordered_map<Entity, Velocity> velocityComponents;
     std::unordered_map<Entity, Size> sizeComponents;
-    std::unordered_map<Entity, std::shared_ptr<EntityBehaviour>> behaviours;
+    std::unordered_map<Entity, EntityBehaviour*> behaviours;
     std::unordered_map<Entity, EntityType> typeComponents;
     std::unordered_set<Entity> activeEntities;
     std::unordered_map<EntityType, std::unordered_set<Entity>> activeEntitiesByType;
@@ -147,14 +167,14 @@ protected:
 
 class SystemManager {
 public:
-    void update(float dt);
-    void initialize(std::shared_ptr<EntityManager> em, std::shared_ptr<EventBus> eb);
+    virtual void update(float dt);
+    void initialize(EntityManager* em, EventBus* eb, MovementSystem* ms, CollisionSystem* cs, StatusSystem* ss);
     SystemManager() = default; 
     
 protected:
-    MovementSystem movementSystem;
-    StatusSystem statusSystem;
-    CollisionSystem collisionSystem;
+    MovementSystem* movementSystem;
+    StatusSystem* statusSystem;
+    CollisionSystem* collisionSystem;
 
 };
 

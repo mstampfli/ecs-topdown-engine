@@ -1,0 +1,1 @@
+  -L"C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glfw/lib"  -L"C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glad/lib"  libgameengine.a -lglfw3 -lglad -lwinmm -lgdi32 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

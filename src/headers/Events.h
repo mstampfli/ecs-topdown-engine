@@ -9,12 +9,12 @@
     
 class Event {
 public:
-    
+    virtual ~Event() = default;
 };
 
 class StatusEvent : public Event {
 public:
-    ~StatusEvent() = default;
+    virtual ~StatusEvent() = default;
 };
 
 class StatusAppliedEvent : public StatusEvent {
@@ -23,10 +23,11 @@ public:
     float interval;
     std::function<bool()> condition;
     float timeSinceLastTick = 0.0f;
-    std::shared_ptr<Event> event;
 
-    StatusAppliedEvent(Entity source, Entity target, float interval, std::function<bool()> condition) 
+    StatusAppliedEvent(Entity target, float interval, std::function<bool()> condition) 
         : target(target), interval(interval), condition(condition) {}
+
+    virtual ~StatusAppliedEvent() = default;
 };
 
 class StatusRemovedEvent : public StatusEvent {

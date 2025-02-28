@@ -5,7 +5,7 @@
             "name": "Debug MyRPGEngine",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/MyRPGEngine.exe", // Adjust to your executable
+            "program": "${workspaceFolder}/build/GameEngineExecutable.exe", // Adjust to your executable
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/build", // Working directory

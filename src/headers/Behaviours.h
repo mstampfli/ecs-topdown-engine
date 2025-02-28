@@ -8,12 +8,14 @@
 
 class EntityBehaviour {
 public:
+    
     virtual void update(Entity entity, float dt) = 0;
     virtual ~EntityBehaviour() = default; // Ensure proper cleanup
-    virtual void initialize(std::shared_ptr<EntityManager> em); 
+    virtual void initialize(EntityManager* em); 
 
+    EntityBehaviour(EntityManager* em) { initialize(em); }
 protected:
-    std::shared_ptr<EntityManager> entityManager = nullptr;
+    EntityManager* entityManager = nullptr;
 };
 
 

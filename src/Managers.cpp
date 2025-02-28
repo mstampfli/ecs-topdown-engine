@@ -60,18 +60,22 @@ std::unordered_map<std::string, std::unique_ptr<SoLoud::Wav>>& AudioManager::get
     return sounds;
 }
 
+
 void SystemManager::update(float dt) {
 
-    movementSystem.update(dt);
-    collisionSystem.update(dt);
-    statusSystem.update(dt);
+    movementSystem->update(dt);
+    collisionSystem->update(dt);
+    statusSystem->update(dt);
 }
 
-void SystemManager::initialize(std::shared_ptr<EntityManager> em, std::shared_ptr<EventBus> eb) {
-    
-    movementSystem.initialize(em, eb);
-    collisionSystem.initialize(em, eb);
-    statusSystem.initialize(em, eb);
+void SystemManager::initialize(EntityManager* em, EventBus* eb, MovementSystem* ms, CollisionSystem* cs, StatusSystem* ss) {
+    movementSystem = ms;
+    collisionSystem = cs;
+    statusSystem = ss;
+
+   /*movementSystem->initialize(em, eb);
+    collisionSystem->initialize(em, eb);
+    statusSystem->initialize(em, eb);*/
 
 }
 
@@ -135,12 +139,11 @@ const EntityType* EntityManager::getType(Entity entity) {
     return nullptr;
 }
 
-void EntityManager::setBehaviour(Entity entity, std::shared_ptr<EntityBehaviour> behaviour) {
-    behaviour->initialize(getSharedPtr());
-    behaviours[entity] = std::move(behaviour);
+void EntityManager::setBehaviour(Entity entity, EntityBehaviour* behaviour) {
+    behaviours[entity] = behaviour;
 }
 
-const std::shared_ptr<EntityBehaviour> EntityManager::getBehaviour(Entity entity) {
+const EntityBehaviour* EntityManager::getBehaviour(Entity entity) {
     if (behaviours.count(entity) > 0) {
         return behaviours.at(entity);
     }
@@ -189,9 +192,56 @@ void EntityManager::setVelocity(Entity entity, const Velocity& vel) {
     velocityComponents[entity] = vel; 
 }
 
-/*void RenderManager::testFunction() {
+void InputManager::initialize(Window* w) {
+    window = w;
+    glfwSetWindowUserPointer(window->getGLFWwindow(), this);
+    glfwSetKeyCallback(window->getGLFWwindow(), keyCallBack);
+}   
 
-    beginDraw();
-    endDraw();
+void InputManager::keyCallBack(GLFWwindow* window, int key, int scancode, int action, int mods) {
+    InputManager* inputManager = static_cast<InputManager*>(glfwGetWindowUserPointer(window));
+    if (inputManager) inputManager->storeKeyInputs(key, action);
+}
 
-}*/
+void InputManager::storeKeyInputs(int key, int action) {
+    if (action == GLFW_PRESS) {
+        if (!currentInputs[key]) {
+            currentInputs[key] = true;
+            newInputs.insert(key);
+
+            if (endedInputs.count(key) > 0) endedInputs.erase(key);
+        } 
+    }
+    else if (action == GLFW_RELEASE) {
+        currentInputs[key] = false;
+        endedInputs.insert(key);  
+
+        if (newInputs.count(key) > 0) newInputs.erase(key);
+    }
+}
+
+bool InputManager::isKeyDown(int key) {
+    if (currentInputs.count(key) > 0) {
+        return currentInputs.at(key);
+    }
+    return false;
+}
+
+bool InputManager::isKeyUp(int key) {
+    if (currentInputs.count(key) > 0) {
+        return !currentInputs.at(key);
+    }
+    return true;
+}
+
+bool InputManager::isKeyPressed(int key) {
+    return newInputs.count(key) > 0;
+}
+
+bool InputManager::isKeyReleased(int key) {
+    return endedInputs.count(key) > 0;
+}
+
+void InputManager::update() {
+    glfwPollEvents();
+}

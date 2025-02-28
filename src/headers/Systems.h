@@ -15,31 +15,34 @@ class System {
 public:
     virtual void update(float dt) = 0;
     virtual ~System() = default;
-    virtual void initialize(std::shared_ptr<EntityManager> em, std::shared_ptr<EventBus> eb); 
+    virtual void initialize(EntityManager* em, EventBus* eb); 
 protected:
-    std::shared_ptr<EntityManager> entityManager = nullptr;
-    std::shared_ptr<EventBus> eventBus = nullptr;
+    EntityManager* entityManager = nullptr;
+    EventBus* eventBus = nullptr;
 };
 
 class MovementSystem : public System {
 public:
     void update(float dt) override;
-    ~MovementSystem() = default;
+    virtual ~MovementSystem() = default;
+protected:
+    EntityManager* myEntityManager;
 };
 
 class StatusSystem : public System {
 public:
     void update(float dt) override;
-    void initialize(std::shared_ptr<EntityManager> em, std::shared_ptr<EventBus> eb) override;
-    const std::vector<std::shared_ptr<StatusAppliedEvent>>& getActiveStatuses() const;
-    ~StatusSystem() = default;
+    void initialize(EntityManager* em, EventBus* eb) override;
+    const std::vector<StatusAppliedEvent*>& getActiveStatuses() const;
+    virtual ~StatusSystem() = default;
 
 protected: 
 
-    void addStatus(std::shared_ptr<StatusAppliedEvent> status);
-    void removeStatus(std::shared_ptr<StatusAppliedEvent> status);
-    std::vector<std::shared_ptr<StatusAppliedEvent>> activeStatuses;
-    bool isStatusEqual(std::shared_ptr<StatusAppliedEvent> status1, std::shared_ptr<StatusAppliedEvent> status2);
+    void addStatus(StatusAppliedEvent* status);
+    void removeStatus(StatusAppliedEvent* status);
+    std::vector<StatusAppliedEvent*> activeStatuses;
+    bool isStatusEqual(const StatusAppliedEvent* status1, const StatusAppliedEvent* status2);
+    virtual void handleStatusUpdate(StatusAppliedEvent* status) = 0;
 
 };
 

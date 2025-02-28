@@ -8,7 +8,7 @@
 #include <iostream>
 #include <cmath>
 
-void EntityBehaviour::initialize(std::shared_ptr<EntityManager> em) {
+void EntityBehaviour::initialize(EntityManager* em) {
     entityManager = em;
 }
 

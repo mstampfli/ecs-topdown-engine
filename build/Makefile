@@ -116,37 +116,949 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named MyRPGEngine
+# Target rules for targets named gameengine
 
 # Build rule for target.
-MyRPGEngine: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 MyRPGEngine
-.PHONY : MyRPGEngine
+gameengine: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gameengine
+.PHONY : gameengine
 
 # fast build rule for target.
-MyRPGEngine/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGEngine.dir\build.make CMakeFiles/MyRPGEngine.dir/build
-.PHONY : MyRPGEngine/fast
+gameengine/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/build
+.PHONY : gameengine/fast
 
 #=============================================================================
-# Target rules for targets named MyRPGGame
+# Target rules for targets named GameEngineExecutable
 
 # Build rule for target.
-MyRPGGame: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 MyRPGGame
-.PHONY : MyRPGGame
+GameEngineExecutable: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 GameEngineExecutable
+.PHONY : GameEngineExecutable
 
 # fast build rule for target.
-MyRPGGame/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGGame.dir\build.make CMakeFiles/MyRPGGame.dir/build
-.PHONY : MyRPGGame/fast
+GameEngineExecutable/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngineExecutable.dir\build.make CMakeFiles/GameEngineExecutable.dir/build
+.PHONY : GameEngineExecutable/fast
+
+libraries/graphicslib/src/Camera.obj: libraries/graphicslib/src/Camera.cpp.obj
+.PHONY : libraries/graphicslib/src/Camera.obj
+
+# target to build an object file
+libraries/graphicslib/src/Camera.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/graphicslib/src/Camera.cpp.obj
+.PHONY : libraries/graphicslib/src/Camera.cpp.obj
+
+libraries/graphicslib/src/Camera.i: libraries/graphicslib/src/Camera.cpp.i
+.PHONY : libraries/graphicslib/src/Camera.i
+
+# target to preprocess a source file
+libraries/graphicslib/src/Camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/graphicslib/src/Camera.cpp.i
+.PHONY : libraries/graphicslib/src/Camera.cpp.i
+
+libraries/graphicslib/src/Camera.s: libraries/graphicslib/src/Camera.cpp.s
+.PHONY : libraries/graphicslib/src/Camera.s
+
+# target to generate assembly for a file
+libraries/graphicslib/src/Camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/graphicslib/src/Camera.cpp.s
+.PHONY : libraries/graphicslib/src/Camera.cpp.s
+
+libraries/graphicslib/src/Mesh.obj: libraries/graphicslib/src/Mesh.cpp.obj
+.PHONY : libraries/graphicslib/src/Mesh.obj
+
+# target to build an object file
+libraries/graphicslib/src/Mesh.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/graphicslib/src/Mesh.cpp.obj
+.PHONY : libraries/graphicslib/src/Mesh.cpp.obj
+
+libraries/graphicslib/src/Mesh.i: libraries/graphicslib/src/Mesh.cpp.i
+.PHONY : libraries/graphicslib/src/Mesh.i
+
+# target to preprocess a source file
+libraries/graphicslib/src/Mesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/graphicslib/src/Mesh.cpp.i
+.PHONY : libraries/graphicslib/src/Mesh.cpp.i
+
+libraries/graphicslib/src/Mesh.s: libraries/graphicslib/src/Mesh.cpp.s
+.PHONY : libraries/graphicslib/src/Mesh.s
+
+# target to generate assembly for a file
+libraries/graphicslib/src/Mesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/graphicslib/src/Mesh.cpp.s
+.PHONY : libraries/graphicslib/src/Mesh.cpp.s
+
+libraries/graphicslib/src/Renderer.obj: libraries/graphicslib/src/Renderer.cpp.obj
+.PHONY : libraries/graphicslib/src/Renderer.obj
+
+# target to build an object file
+libraries/graphicslib/src/Renderer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/graphicslib/src/Renderer.cpp.obj
+.PHONY : libraries/graphicslib/src/Renderer.cpp.obj
+
+libraries/graphicslib/src/Renderer.i: libraries/graphicslib/src/Renderer.cpp.i
+.PHONY : libraries/graphicslib/src/Renderer.i
+
+# target to preprocess a source file
+libraries/graphicslib/src/Renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/graphicslib/src/Renderer.cpp.i
+.PHONY : libraries/graphicslib/src/Renderer.cpp.i
+
+libraries/graphicslib/src/Renderer.s: libraries/graphicslib/src/Renderer.cpp.s
+.PHONY : libraries/graphicslib/src/Renderer.s
+
+# target to generate assembly for a file
+libraries/graphicslib/src/Renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/graphicslib/src/Renderer.cpp.s
+.PHONY : libraries/graphicslib/src/Renderer.cpp.s
+
+libraries/graphicslib/src/Shader.obj: libraries/graphicslib/src/Shader.cpp.obj
+.PHONY : libraries/graphicslib/src/Shader.obj
+
+# target to build an object file
+libraries/graphicslib/src/Shader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/graphicslib/src/Shader.cpp.obj
+.PHONY : libraries/graphicslib/src/Shader.cpp.obj
+
+libraries/graphicslib/src/Shader.i: libraries/graphicslib/src/Shader.cpp.i
+.PHONY : libraries/graphicslib/src/Shader.i
+
+# target to preprocess a source file
+libraries/graphicslib/src/Shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/graphicslib/src/Shader.cpp.i
+.PHONY : libraries/graphicslib/src/Shader.cpp.i
+
+libraries/graphicslib/src/Shader.s: libraries/graphicslib/src/Shader.cpp.s
+.PHONY : libraries/graphicslib/src/Shader.s
+
+# target to generate assembly for a file
+libraries/graphicslib/src/Shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/graphicslib/src/Shader.cpp.s
+.PHONY : libraries/graphicslib/src/Shader.cpp.s
+
+libraries/graphicslib/src/Texture.obj: libraries/graphicslib/src/Texture.cpp.obj
+.PHONY : libraries/graphicslib/src/Texture.obj
+
+# target to build an object file
+libraries/graphicslib/src/Texture.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/graphicslib/src/Texture.cpp.obj
+.PHONY : libraries/graphicslib/src/Texture.cpp.obj
+
+libraries/graphicslib/src/Texture.i: libraries/graphicslib/src/Texture.cpp.i
+.PHONY : libraries/graphicslib/src/Texture.i
+
+# target to preprocess a source file
+libraries/graphicslib/src/Texture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/graphicslib/src/Texture.cpp.i
+.PHONY : libraries/graphicslib/src/Texture.cpp.i
+
+libraries/graphicslib/src/Texture.s: libraries/graphicslib/src/Texture.cpp.s
+.PHONY : libraries/graphicslib/src/Texture.s
+
+# target to generate assembly for a file
+libraries/graphicslib/src/Texture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/graphicslib/src/Texture.cpp.s
+.PHONY : libraries/graphicslib/src/Texture.cpp.s
+
+libraries/graphicslib/src/Window.obj: libraries/graphicslib/src/Window.cpp.obj
+.PHONY : libraries/graphicslib/src/Window.obj
+
+# target to build an object file
+libraries/graphicslib/src/Window.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/graphicslib/src/Window.cpp.obj
+.PHONY : libraries/graphicslib/src/Window.cpp.obj
+
+libraries/graphicslib/src/Window.i: libraries/graphicslib/src/Window.cpp.i
+.PHONY : libraries/graphicslib/src/Window.i
+
+# target to preprocess a source file
+libraries/graphicslib/src/Window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/graphicslib/src/Window.cpp.i
+.PHONY : libraries/graphicslib/src/Window.cpp.i
+
+libraries/graphicslib/src/Window.s: libraries/graphicslib/src/Window.cpp.s
+.PHONY : libraries/graphicslib/src/Window.s
+
+# target to generate assembly for a file
+libraries/graphicslib/src/Window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/graphicslib/src/Window.cpp.s
+.PHONY : libraries/graphicslib/src/Window.cpp.s
+
+libraries/soloud/src/backend/wasapi/soloud_wasapi.obj: libraries/soloud/src/backend/wasapi/soloud_wasapi.cpp.obj
+.PHONY : libraries/soloud/src/backend/wasapi/soloud_wasapi.obj
+
+# target to build an object file
+libraries/soloud/src/backend/wasapi/soloud_wasapi.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/backend/wasapi/soloud_wasapi.cpp.obj
+.PHONY : libraries/soloud/src/backend/wasapi/soloud_wasapi.cpp.obj
+
+libraries/soloud/src/backend/wasapi/soloud_wasapi.i: libraries/soloud/src/backend/wasapi/soloud_wasapi.cpp.i
+.PHONY : libraries/soloud/src/backend/wasapi/soloud_wasapi.i
+
+# target to preprocess a source file
+libraries/soloud/src/backend/wasapi/soloud_wasapi.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/backend/wasapi/soloud_wasapi.cpp.i
+.PHONY : libraries/soloud/src/backend/wasapi/soloud_wasapi.cpp.i
+
+libraries/soloud/src/backend/wasapi/soloud_wasapi.s: libraries/soloud/src/backend/wasapi/soloud_wasapi.cpp.s
+.PHONY : libraries/soloud/src/backend/wasapi/soloud_wasapi.s
+
+# target to generate assembly for a file
+libraries/soloud/src/backend/wasapi/soloud_wasapi.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/backend/wasapi/soloud_wasapi.cpp.s
+.PHONY : libraries/soloud/src/backend/wasapi/soloud_wasapi.cpp.s
+
+libraries/soloud/src/core/soloud.obj: libraries/soloud/src/core/soloud.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud.obj
+
+# target to build an object file
+libraries/soloud/src/core/soloud.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud.cpp.obj
+
+libraries/soloud/src/core/soloud.i: libraries/soloud/src/core/soloud.cpp.i
+.PHONY : libraries/soloud/src/core/soloud.i
+
+# target to preprocess a source file
+libraries/soloud/src/core/soloud.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud.cpp.i
+.PHONY : libraries/soloud/src/core/soloud.cpp.i
+
+libraries/soloud/src/core/soloud.s: libraries/soloud/src/core/soloud.cpp.s
+.PHONY : libraries/soloud/src/core/soloud.s
+
+# target to generate assembly for a file
+libraries/soloud/src/core/soloud.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud.cpp.s
+.PHONY : libraries/soloud/src/core/soloud.cpp.s
+
+libraries/soloud/src/core/soloud_audiosource.obj: libraries/soloud/src/core/soloud_audiosource.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_audiosource.obj
+
+# target to build an object file
+libraries/soloud/src/core/soloud_audiosource.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_audiosource.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_audiosource.cpp.obj
+
+libraries/soloud/src/core/soloud_audiosource.i: libraries/soloud/src/core/soloud_audiosource.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_audiosource.i
+
+# target to preprocess a source file
+libraries/soloud/src/core/soloud_audiosource.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_audiosource.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_audiosource.cpp.i
+
+libraries/soloud/src/core/soloud_audiosource.s: libraries/soloud/src/core/soloud_audiosource.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_audiosource.s
+
+# target to generate assembly for a file
+libraries/soloud/src/core/soloud_audiosource.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_audiosource.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_audiosource.cpp.s
+
+libraries/soloud/src/core/soloud_bus.obj: libraries/soloud/src/core/soloud_bus.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_bus.obj
+
+# target to build an object file
+libraries/soloud/src/core/soloud_bus.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_bus.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_bus.cpp.obj
+
+libraries/soloud/src/core/soloud_bus.i: libraries/soloud/src/core/soloud_bus.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_bus.i
+
+# target to preprocess a source file
+libraries/soloud/src/core/soloud_bus.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_bus.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_bus.cpp.i
+
+libraries/soloud/src/core/soloud_bus.s: libraries/soloud/src/core/soloud_bus.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_bus.s
+
+# target to generate assembly for a file
+libraries/soloud/src/core/soloud_bus.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_bus.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_bus.cpp.s
+
+libraries/soloud/src/core/soloud_core_3d.obj: libraries/soloud/src/core/soloud_core_3d.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_core_3d.obj
+
+# target to build an object file
+libraries/soloud/src/core/soloud_core_3d.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_3d.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_core_3d.cpp.obj
+
+libraries/soloud/src/core/soloud_core_3d.i: libraries/soloud/src/core/soloud_core_3d.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_core_3d.i
+
+# target to preprocess a source file
+libraries/soloud/src/core/soloud_core_3d.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_3d.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_core_3d.cpp.i
+
+libraries/soloud/src/core/soloud_core_3d.s: libraries/soloud/src/core/soloud_core_3d.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_core_3d.s
+
+# target to generate assembly for a file
+libraries/soloud/src/core/soloud_core_3d.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_3d.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_core_3d.cpp.s
+
+libraries/soloud/src/core/soloud_core_basicops.obj: libraries/soloud/src/core/soloud_core_basicops.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_core_basicops.obj
+
+# target to build an object file
+libraries/soloud/src/core/soloud_core_basicops.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_basicops.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_core_basicops.cpp.obj
+
+libraries/soloud/src/core/soloud_core_basicops.i: libraries/soloud/src/core/soloud_core_basicops.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_core_basicops.i
+
+# target to preprocess a source file
+libraries/soloud/src/core/soloud_core_basicops.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_basicops.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_core_basicops.cpp.i
+
+libraries/soloud/src/core/soloud_core_basicops.s: libraries/soloud/src/core/soloud_core_basicops.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_core_basicops.s
+
+# target to generate assembly for a file
+libraries/soloud/src/core/soloud_core_basicops.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_basicops.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_core_basicops.cpp.s
+
+libraries/soloud/src/core/soloud_core_faderops.obj: libraries/soloud/src/core/soloud_core_faderops.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_core_faderops.obj
+
+# target to build an object file
+libraries/soloud/src/core/soloud_core_faderops.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_faderops.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_core_faderops.cpp.obj
+
+libraries/soloud/src/core/soloud_core_faderops.i: libraries/soloud/src/core/soloud_core_faderops.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_core_faderops.i
+
+# target to preprocess a source file
+libraries/soloud/src/core/soloud_core_faderops.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_faderops.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_core_faderops.cpp.i
+
+libraries/soloud/src/core/soloud_core_faderops.s: libraries/soloud/src/core/soloud_core_faderops.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_core_faderops.s
+
+# target to generate assembly for a file
+libraries/soloud/src/core/soloud_core_faderops.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_faderops.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_core_faderops.cpp.s
+
+libraries/soloud/src/core/soloud_core_filterops.obj: libraries/soloud/src/core/soloud_core_filterops.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_core_filterops.obj
+
+# target to build an object file
+libraries/soloud/src/core/soloud_core_filterops.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_filterops.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_core_filterops.cpp.obj
+
+libraries/soloud/src/core/soloud_core_filterops.i: libraries/soloud/src/core/soloud_core_filterops.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_core_filterops.i
+
+# target to preprocess a source file
+libraries/soloud/src/core/soloud_core_filterops.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_filterops.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_core_filterops.cpp.i
+
+libraries/soloud/src/core/soloud_core_filterops.s: libraries/soloud/src/core/soloud_core_filterops.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_core_filterops.s
+
+# target to generate assembly for a file
+libraries/soloud/src/core/soloud_core_filterops.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_filterops.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_core_filterops.cpp.s
+
+libraries/soloud/src/core/soloud_core_getters.obj: libraries/soloud/src/core/soloud_core_getters.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_core_getters.obj
+
+# target to build an object file
+libraries/soloud/src/core/soloud_core_getters.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_getters.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_core_getters.cpp.obj
+
+libraries/soloud/src/core/soloud_core_getters.i: libraries/soloud/src/core/soloud_core_getters.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_core_getters.i
+
+# target to preprocess a source file
+libraries/soloud/src/core/soloud_core_getters.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_getters.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_core_getters.cpp.i
+
+libraries/soloud/src/core/soloud_core_getters.s: libraries/soloud/src/core/soloud_core_getters.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_core_getters.s
+
+# target to generate assembly for a file
+libraries/soloud/src/core/soloud_core_getters.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_getters.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_core_getters.cpp.s
+
+libraries/soloud/src/core/soloud_core_setters.obj: libraries/soloud/src/core/soloud_core_setters.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_core_setters.obj
+
+# target to build an object file
+libraries/soloud/src/core/soloud_core_setters.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_setters.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_core_setters.cpp.obj
+
+libraries/soloud/src/core/soloud_core_setters.i: libraries/soloud/src/core/soloud_core_setters.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_core_setters.i
+
+# target to preprocess a source file
+libraries/soloud/src/core/soloud_core_setters.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_setters.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_core_setters.cpp.i
+
+libraries/soloud/src/core/soloud_core_setters.s: libraries/soloud/src/core/soloud_core_setters.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_core_setters.s
+
+# target to generate assembly for a file
+libraries/soloud/src/core/soloud_core_setters.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_setters.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_core_setters.cpp.s
+
+libraries/soloud/src/core/soloud_core_voicegroup.obj: libraries/soloud/src/core/soloud_core_voicegroup.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_core_voicegroup.obj
+
+# target to build an object file
+libraries/soloud/src/core/soloud_core_voicegroup.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_voicegroup.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_core_voicegroup.cpp.obj
+
+libraries/soloud/src/core/soloud_core_voicegroup.i: libraries/soloud/src/core/soloud_core_voicegroup.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_core_voicegroup.i
+
+# target to preprocess a source file
+libraries/soloud/src/core/soloud_core_voicegroup.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_voicegroup.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_core_voicegroup.cpp.i
+
+libraries/soloud/src/core/soloud_core_voicegroup.s: libraries/soloud/src/core/soloud_core_voicegroup.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_core_voicegroup.s
+
+# target to generate assembly for a file
+libraries/soloud/src/core/soloud_core_voicegroup.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_voicegroup.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_core_voicegroup.cpp.s
+
+libraries/soloud/src/core/soloud_core_voiceops.obj: libraries/soloud/src/core/soloud_core_voiceops.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_core_voiceops.obj
+
+# target to build an object file
+libraries/soloud/src/core/soloud_core_voiceops.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_voiceops.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_core_voiceops.cpp.obj
+
+libraries/soloud/src/core/soloud_core_voiceops.i: libraries/soloud/src/core/soloud_core_voiceops.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_core_voiceops.i
+
+# target to preprocess a source file
+libraries/soloud/src/core/soloud_core_voiceops.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_voiceops.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_core_voiceops.cpp.i
+
+libraries/soloud/src/core/soloud_core_voiceops.s: libraries/soloud/src/core/soloud_core_voiceops.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_core_voiceops.s
+
+# target to generate assembly for a file
+libraries/soloud/src/core/soloud_core_voiceops.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_core_voiceops.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_core_voiceops.cpp.s
+
+libraries/soloud/src/core/soloud_fader.obj: libraries/soloud/src/core/soloud_fader.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_fader.obj
+
+# target to build an object file
+libraries/soloud/src/core/soloud_fader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_fader.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_fader.cpp.obj
+
+libraries/soloud/src/core/soloud_fader.i: libraries/soloud/src/core/soloud_fader.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_fader.i
+
+# target to preprocess a source file
+libraries/soloud/src/core/soloud_fader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_fader.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_fader.cpp.i
+
+libraries/soloud/src/core/soloud_fader.s: libraries/soloud/src/core/soloud_fader.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_fader.s
+
+# target to generate assembly for a file
+libraries/soloud/src/core/soloud_fader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_fader.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_fader.cpp.s
+
+libraries/soloud/src/core/soloud_fft.obj: libraries/soloud/src/core/soloud_fft.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_fft.obj
+
+# target to build an object file
+libraries/soloud/src/core/soloud_fft.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_fft.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_fft.cpp.obj
+
+libraries/soloud/src/core/soloud_fft.i: libraries/soloud/src/core/soloud_fft.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_fft.i
+
+# target to preprocess a source file
+libraries/soloud/src/core/soloud_fft.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_fft.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_fft.cpp.i
+
+libraries/soloud/src/core/soloud_fft.s: libraries/soloud/src/core/soloud_fft.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_fft.s
+
+# target to generate assembly for a file
+libraries/soloud/src/core/soloud_fft.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_fft.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_fft.cpp.s
+
+libraries/soloud/src/core/soloud_fft_lut.obj: libraries/soloud/src/core/soloud_fft_lut.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_fft_lut.obj
+
+# target to build an object file
+libraries/soloud/src/core/soloud_fft_lut.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_fft_lut.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_fft_lut.cpp.obj
+
+libraries/soloud/src/core/soloud_fft_lut.i: libraries/soloud/src/core/soloud_fft_lut.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_fft_lut.i
+
+# target to preprocess a source file
+libraries/soloud/src/core/soloud_fft_lut.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_fft_lut.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_fft_lut.cpp.i
+
+libraries/soloud/src/core/soloud_fft_lut.s: libraries/soloud/src/core/soloud_fft_lut.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_fft_lut.s
+
+# target to generate assembly for a file
+libraries/soloud/src/core/soloud_fft_lut.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_fft_lut.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_fft_lut.cpp.s
+
+libraries/soloud/src/core/soloud_file.obj: libraries/soloud/src/core/soloud_file.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_file.obj
+
+# target to build an object file
+libraries/soloud/src/core/soloud_file.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_file.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_file.cpp.obj
+
+libraries/soloud/src/core/soloud_file.i: libraries/soloud/src/core/soloud_file.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_file.i
+
+# target to preprocess a source file
+libraries/soloud/src/core/soloud_file.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_file.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_file.cpp.i
+
+libraries/soloud/src/core/soloud_file.s: libraries/soloud/src/core/soloud_file.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_file.s
+
+# target to generate assembly for a file
+libraries/soloud/src/core/soloud_file.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_file.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_file.cpp.s
+
+libraries/soloud/src/core/soloud_filter.obj: libraries/soloud/src/core/soloud_filter.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_filter.obj
+
+# target to build an object file
+libraries/soloud/src/core/soloud_filter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_filter.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_filter.cpp.obj
+
+libraries/soloud/src/core/soloud_filter.i: libraries/soloud/src/core/soloud_filter.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_filter.i
+
+# target to preprocess a source file
+libraries/soloud/src/core/soloud_filter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_filter.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_filter.cpp.i
+
+libraries/soloud/src/core/soloud_filter.s: libraries/soloud/src/core/soloud_filter.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_filter.s
+
+# target to generate assembly for a file
+libraries/soloud/src/core/soloud_filter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_filter.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_filter.cpp.s
+
+libraries/soloud/src/core/soloud_misc.obj: libraries/soloud/src/core/soloud_misc.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_misc.obj
+
+# target to build an object file
+libraries/soloud/src/core/soloud_misc.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_misc.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_misc.cpp.obj
+
+libraries/soloud/src/core/soloud_misc.i: libraries/soloud/src/core/soloud_misc.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_misc.i
+
+# target to preprocess a source file
+libraries/soloud/src/core/soloud_misc.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_misc.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_misc.cpp.i
+
+libraries/soloud/src/core/soloud_misc.s: libraries/soloud/src/core/soloud_misc.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_misc.s
+
+# target to generate assembly for a file
+libraries/soloud/src/core/soloud_misc.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_misc.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_misc.cpp.s
+
+libraries/soloud/src/core/soloud_queue.obj: libraries/soloud/src/core/soloud_queue.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_queue.obj
+
+# target to build an object file
+libraries/soloud/src/core/soloud_queue.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_queue.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_queue.cpp.obj
+
+libraries/soloud/src/core/soloud_queue.i: libraries/soloud/src/core/soloud_queue.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_queue.i
+
+# target to preprocess a source file
+libraries/soloud/src/core/soloud_queue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_queue.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_queue.cpp.i
+
+libraries/soloud/src/core/soloud_queue.s: libraries/soloud/src/core/soloud_queue.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_queue.s
+
+# target to generate assembly for a file
+libraries/soloud/src/core/soloud_queue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_queue.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_queue.cpp.s
+
+libraries/soloud/src/core/soloud_thread.obj: libraries/soloud/src/core/soloud_thread.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_thread.obj
+
+# target to build an object file
+libraries/soloud/src/core/soloud_thread.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_thread.cpp.obj
+.PHONY : libraries/soloud/src/core/soloud_thread.cpp.obj
+
+libraries/soloud/src/core/soloud_thread.i: libraries/soloud/src/core/soloud_thread.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_thread.i
+
+# target to preprocess a source file
+libraries/soloud/src/core/soloud_thread.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_thread.cpp.i
+.PHONY : libraries/soloud/src/core/soloud_thread.cpp.i
+
+libraries/soloud/src/core/soloud_thread.s: libraries/soloud/src/core/soloud_thread.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_thread.s
+
+# target to generate assembly for a file
+libraries/soloud/src/core/soloud_thread.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/core/soloud_thread.cpp.s
+.PHONY : libraries/soloud/src/core/soloud_thread.cpp.s
+
+libraries/soloud/src/filter/soloud_bassboostfilter.obj: libraries/soloud/src/filter/soloud_bassboostfilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_bassboostfilter.obj
+
+# target to build an object file
+libraries/soloud/src/filter/soloud_bassboostfilter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_bassboostfilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_bassboostfilter.cpp.obj
+
+libraries/soloud/src/filter/soloud_bassboostfilter.i: libraries/soloud/src/filter/soloud_bassboostfilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_bassboostfilter.i
+
+# target to preprocess a source file
+libraries/soloud/src/filter/soloud_bassboostfilter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_bassboostfilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_bassboostfilter.cpp.i
+
+libraries/soloud/src/filter/soloud_bassboostfilter.s: libraries/soloud/src/filter/soloud_bassboostfilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_bassboostfilter.s
+
+# target to generate assembly for a file
+libraries/soloud/src/filter/soloud_bassboostfilter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_bassboostfilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_bassboostfilter.cpp.s
+
+libraries/soloud/src/filter/soloud_biquadresonantfilter.obj: libraries/soloud/src/filter/soloud_biquadresonantfilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_biquadresonantfilter.obj
+
+# target to build an object file
+libraries/soloud/src/filter/soloud_biquadresonantfilter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_biquadresonantfilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_biquadresonantfilter.cpp.obj
+
+libraries/soloud/src/filter/soloud_biquadresonantfilter.i: libraries/soloud/src/filter/soloud_biquadresonantfilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_biquadresonantfilter.i
+
+# target to preprocess a source file
+libraries/soloud/src/filter/soloud_biquadresonantfilter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_biquadresonantfilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_biquadresonantfilter.cpp.i
+
+libraries/soloud/src/filter/soloud_biquadresonantfilter.s: libraries/soloud/src/filter/soloud_biquadresonantfilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_biquadresonantfilter.s
+
+# target to generate assembly for a file
+libraries/soloud/src/filter/soloud_biquadresonantfilter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_biquadresonantfilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_biquadresonantfilter.cpp.s
+
+libraries/soloud/src/filter/soloud_dcremovalfilter.obj: libraries/soloud/src/filter/soloud_dcremovalfilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_dcremovalfilter.obj
+
+# target to build an object file
+libraries/soloud/src/filter/soloud_dcremovalfilter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_dcremovalfilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_dcremovalfilter.cpp.obj
+
+libraries/soloud/src/filter/soloud_dcremovalfilter.i: libraries/soloud/src/filter/soloud_dcremovalfilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_dcremovalfilter.i
+
+# target to preprocess a source file
+libraries/soloud/src/filter/soloud_dcremovalfilter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_dcremovalfilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_dcremovalfilter.cpp.i
+
+libraries/soloud/src/filter/soloud_dcremovalfilter.s: libraries/soloud/src/filter/soloud_dcremovalfilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_dcremovalfilter.s
+
+# target to generate assembly for a file
+libraries/soloud/src/filter/soloud_dcremovalfilter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_dcremovalfilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_dcremovalfilter.cpp.s
+
+libraries/soloud/src/filter/soloud_duckfilter.obj: libraries/soloud/src/filter/soloud_duckfilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_duckfilter.obj
+
+# target to build an object file
+libraries/soloud/src/filter/soloud_duckfilter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_duckfilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_duckfilter.cpp.obj
+
+libraries/soloud/src/filter/soloud_duckfilter.i: libraries/soloud/src/filter/soloud_duckfilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_duckfilter.i
+
+# target to preprocess a source file
+libraries/soloud/src/filter/soloud_duckfilter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_duckfilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_duckfilter.cpp.i
+
+libraries/soloud/src/filter/soloud_duckfilter.s: libraries/soloud/src/filter/soloud_duckfilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_duckfilter.s
+
+# target to generate assembly for a file
+libraries/soloud/src/filter/soloud_duckfilter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_duckfilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_duckfilter.cpp.s
+
+libraries/soloud/src/filter/soloud_echofilter.obj: libraries/soloud/src/filter/soloud_echofilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_echofilter.obj
+
+# target to build an object file
+libraries/soloud/src/filter/soloud_echofilter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_echofilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_echofilter.cpp.obj
+
+libraries/soloud/src/filter/soloud_echofilter.i: libraries/soloud/src/filter/soloud_echofilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_echofilter.i
+
+# target to preprocess a source file
+libraries/soloud/src/filter/soloud_echofilter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_echofilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_echofilter.cpp.i
+
+libraries/soloud/src/filter/soloud_echofilter.s: libraries/soloud/src/filter/soloud_echofilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_echofilter.s
+
+# target to generate assembly for a file
+libraries/soloud/src/filter/soloud_echofilter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_echofilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_echofilter.cpp.s
+
+libraries/soloud/src/filter/soloud_eqfilter.obj: libraries/soloud/src/filter/soloud_eqfilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_eqfilter.obj
+
+# target to build an object file
+libraries/soloud/src/filter/soloud_eqfilter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_eqfilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_eqfilter.cpp.obj
+
+libraries/soloud/src/filter/soloud_eqfilter.i: libraries/soloud/src/filter/soloud_eqfilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_eqfilter.i
+
+# target to preprocess a source file
+libraries/soloud/src/filter/soloud_eqfilter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_eqfilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_eqfilter.cpp.i
+
+libraries/soloud/src/filter/soloud_eqfilter.s: libraries/soloud/src/filter/soloud_eqfilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_eqfilter.s
+
+# target to generate assembly for a file
+libraries/soloud/src/filter/soloud_eqfilter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_eqfilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_eqfilter.cpp.s
+
+libraries/soloud/src/filter/soloud_fftfilter.obj: libraries/soloud/src/filter/soloud_fftfilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_fftfilter.obj
+
+# target to build an object file
+libraries/soloud/src/filter/soloud_fftfilter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_fftfilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_fftfilter.cpp.obj
+
+libraries/soloud/src/filter/soloud_fftfilter.i: libraries/soloud/src/filter/soloud_fftfilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_fftfilter.i
+
+# target to preprocess a source file
+libraries/soloud/src/filter/soloud_fftfilter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_fftfilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_fftfilter.cpp.i
+
+libraries/soloud/src/filter/soloud_fftfilter.s: libraries/soloud/src/filter/soloud_fftfilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_fftfilter.s
+
+# target to generate assembly for a file
+libraries/soloud/src/filter/soloud_fftfilter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_fftfilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_fftfilter.cpp.s
+
+libraries/soloud/src/filter/soloud_flangerfilter.obj: libraries/soloud/src/filter/soloud_flangerfilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_flangerfilter.obj
+
+# target to build an object file
+libraries/soloud/src/filter/soloud_flangerfilter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_flangerfilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_flangerfilter.cpp.obj
+
+libraries/soloud/src/filter/soloud_flangerfilter.i: libraries/soloud/src/filter/soloud_flangerfilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_flangerfilter.i
+
+# target to preprocess a source file
+libraries/soloud/src/filter/soloud_flangerfilter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_flangerfilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_flangerfilter.cpp.i
+
+libraries/soloud/src/filter/soloud_flangerfilter.s: libraries/soloud/src/filter/soloud_flangerfilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_flangerfilter.s
+
+# target to generate assembly for a file
+libraries/soloud/src/filter/soloud_flangerfilter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_flangerfilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_flangerfilter.cpp.s
+
+libraries/soloud/src/filter/soloud_freeverbfilter.obj: libraries/soloud/src/filter/soloud_freeverbfilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_freeverbfilter.obj
+
+# target to build an object file
+libraries/soloud/src/filter/soloud_freeverbfilter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_freeverbfilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_freeverbfilter.cpp.obj
+
+libraries/soloud/src/filter/soloud_freeverbfilter.i: libraries/soloud/src/filter/soloud_freeverbfilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_freeverbfilter.i
+
+# target to preprocess a source file
+libraries/soloud/src/filter/soloud_freeverbfilter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_freeverbfilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_freeverbfilter.cpp.i
+
+libraries/soloud/src/filter/soloud_freeverbfilter.s: libraries/soloud/src/filter/soloud_freeverbfilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_freeverbfilter.s
+
+# target to generate assembly for a file
+libraries/soloud/src/filter/soloud_freeverbfilter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_freeverbfilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_freeverbfilter.cpp.s
+
+libraries/soloud/src/filter/soloud_lofifilter.obj: libraries/soloud/src/filter/soloud_lofifilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_lofifilter.obj
+
+# target to build an object file
+libraries/soloud/src/filter/soloud_lofifilter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_lofifilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_lofifilter.cpp.obj
+
+libraries/soloud/src/filter/soloud_lofifilter.i: libraries/soloud/src/filter/soloud_lofifilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_lofifilter.i
+
+# target to preprocess a source file
+libraries/soloud/src/filter/soloud_lofifilter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_lofifilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_lofifilter.cpp.i
+
+libraries/soloud/src/filter/soloud_lofifilter.s: libraries/soloud/src/filter/soloud_lofifilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_lofifilter.s
+
+# target to generate assembly for a file
+libraries/soloud/src/filter/soloud_lofifilter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_lofifilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_lofifilter.cpp.s
+
+libraries/soloud/src/filter/soloud_robotizefilter.obj: libraries/soloud/src/filter/soloud_robotizefilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_robotizefilter.obj
+
+# target to build an object file
+libraries/soloud/src/filter/soloud_robotizefilter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_robotizefilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_robotizefilter.cpp.obj
+
+libraries/soloud/src/filter/soloud_robotizefilter.i: libraries/soloud/src/filter/soloud_robotizefilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_robotizefilter.i
+
+# target to preprocess a source file
+libraries/soloud/src/filter/soloud_robotizefilter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_robotizefilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_robotizefilter.cpp.i
+
+libraries/soloud/src/filter/soloud_robotizefilter.s: libraries/soloud/src/filter/soloud_robotizefilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_robotizefilter.s
+
+# target to generate assembly for a file
+libraries/soloud/src/filter/soloud_robotizefilter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_robotizefilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_robotizefilter.cpp.s
+
+libraries/soloud/src/filter/soloud_waveshaperfilter.obj: libraries/soloud/src/filter/soloud_waveshaperfilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_waveshaperfilter.obj
+
+# target to build an object file
+libraries/soloud/src/filter/soloud_waveshaperfilter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_waveshaperfilter.cpp.obj
+.PHONY : libraries/soloud/src/filter/soloud_waveshaperfilter.cpp.obj
+
+libraries/soloud/src/filter/soloud_waveshaperfilter.i: libraries/soloud/src/filter/soloud_waveshaperfilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_waveshaperfilter.i
+
+# target to preprocess a source file
+libraries/soloud/src/filter/soloud_waveshaperfilter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_waveshaperfilter.cpp.i
+.PHONY : libraries/soloud/src/filter/soloud_waveshaperfilter.cpp.i
+
+libraries/soloud/src/filter/soloud_waveshaperfilter.s: libraries/soloud/src/filter/soloud_waveshaperfilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_waveshaperfilter.s
+
+# target to generate assembly for a file
+libraries/soloud/src/filter/soloud_waveshaperfilter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/libraries/soloud/src/filter/soloud_waveshaperfilter.cpp.s
+.PHONY : libraries/soloud/src/filter/soloud_waveshaperfilter.cpp.s
 
 src/Behaviours.obj: src/Behaviours.cpp.obj
 .PHONY : src/Behaviours.obj
 
 # target to build an object file
 src/Behaviours.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGEngine.dir\build.make CMakeFiles/MyRPGEngine.dir/src/Behaviours.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/src/Behaviours.cpp.obj
 .PHONY : src/Behaviours.cpp.obj
 
 src/Behaviours.i: src/Behaviours.cpp.i
@@ -154,7 +1066,7 @@ src/Behaviours.i: src/Behaviours.cpp.i
 
 # target to preprocess a source file
 src/Behaviours.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGEngine.dir\build.make CMakeFiles/MyRPGEngine.dir/src/Behaviours.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/src/Behaviours.cpp.i
 .PHONY : src/Behaviours.cpp.i
 
 src/Behaviours.s: src/Behaviours.cpp.s
@@ -162,7 +1074,7 @@ src/Behaviours.s: src/Behaviours.cpp.s
 
 # target to generate assembly for a file
 src/Behaviours.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGEngine.dir\build.make CMakeFiles/MyRPGEngine.dir/src/Behaviours.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/src/Behaviours.cpp.s
 .PHONY : src/Behaviours.cpp.s
 
 src/DeltaTime.obj: src/DeltaTime.cpp.obj
@@ -170,7 +1082,7 @@ src/DeltaTime.obj: src/DeltaTime.cpp.obj
 
 # target to build an object file
 src/DeltaTime.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGEngine.dir\build.make CMakeFiles/MyRPGEngine.dir/src/DeltaTime.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/src/DeltaTime.cpp.obj
 .PHONY : src/DeltaTime.cpp.obj
 
 src/DeltaTime.i: src/DeltaTime.cpp.i
@@ -178,7 +1090,7 @@ src/DeltaTime.i: src/DeltaTime.cpp.i
 
 # target to preprocess a source file
 src/DeltaTime.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGEngine.dir\build.make CMakeFiles/MyRPGEngine.dir/src/DeltaTime.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/src/DeltaTime.cpp.i
 .PHONY : src/DeltaTime.cpp.i
 
 src/DeltaTime.s: src/DeltaTime.cpp.s
@@ -186,7 +1098,7 @@ src/DeltaTime.s: src/DeltaTime.cpp.s
 
 # target to generate assembly for a file
 src/DeltaTime.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGEngine.dir\build.make CMakeFiles/MyRPGEngine.dir/src/DeltaTime.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/src/DeltaTime.cpp.s
 .PHONY : src/DeltaTime.cpp.s
 
 src/Managers.obj: src/Managers.cpp.obj
@@ -194,7 +1106,7 @@ src/Managers.obj: src/Managers.cpp.obj
 
 # target to build an object file
 src/Managers.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGEngine.dir\build.make CMakeFiles/MyRPGEngine.dir/src/Managers.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/src/Managers.cpp.obj
 .PHONY : src/Managers.cpp.obj
 
 src/Managers.i: src/Managers.cpp.i
@@ -202,7 +1114,7 @@ src/Managers.i: src/Managers.cpp.i
 
 # target to preprocess a source file
 src/Managers.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGEngine.dir\build.make CMakeFiles/MyRPGEngine.dir/src/Managers.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/src/Managers.cpp.i
 .PHONY : src/Managers.cpp.i
 
 src/Managers.s: src/Managers.cpp.s
@@ -210,7 +1122,7 @@ src/Managers.s: src/Managers.cpp.s
 
 # target to generate assembly for a file
 src/Managers.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGEngine.dir\build.make CMakeFiles/MyRPGEngine.dir/src/Managers.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/src/Managers.cpp.s
 .PHONY : src/Managers.cpp.s
 
 src/Systems.obj: src/Systems.cpp.obj
@@ -218,7 +1130,7 @@ src/Systems.obj: src/Systems.cpp.obj
 
 # target to build an object file
 src/Systems.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGEngine.dir\build.make CMakeFiles/MyRPGEngine.dir/src/Systems.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/src/Systems.cpp.obj
 .PHONY : src/Systems.cpp.obj
 
 src/Systems.i: src/Systems.cpp.i
@@ -226,7 +1138,7 @@ src/Systems.i: src/Systems.cpp.i
 
 # target to preprocess a source file
 src/Systems.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGEngine.dir\build.make CMakeFiles/MyRPGEngine.dir/src/Systems.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/src/Systems.cpp.i
 .PHONY : src/Systems.cpp.i
 
 src/Systems.s: src/Systems.cpp.s
@@ -234,7 +1146,7 @@ src/Systems.s: src/Systems.cpp.s
 
 # target to generate assembly for a file
 src/Systems.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGEngine.dir\build.make CMakeFiles/MyRPGEngine.dir/src/Systems.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gameengine.dir\build.make CMakeFiles/gameengine.dir/src/Systems.cpp.s
 .PHONY : src/Systems.cpp.s
 
 src/main.obj: src/main.cpp.obj
@@ -242,8 +1154,7 @@ src/main.obj: src/main.cpp.obj
 
 # target to build an object file
 src/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGEngine.dir\build.make CMakeFiles/MyRPGEngine.dir/src/main.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGGame.dir\build.make CMakeFiles/MyRPGGame.dir/src/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngineExecutable.dir\build.make CMakeFiles/GameEngineExecutable.dir/src/main.cpp.obj
 .PHONY : src/main.cpp.obj
 
 src/main.i: src/main.cpp.i
@@ -251,8 +1162,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGEngine.dir\build.make CMakeFiles/MyRPGEngine.dir/src/main.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGGame.dir\build.make CMakeFiles/MyRPGGame.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngineExecutable.dir\build.make CMakeFiles/GameEngineExecutable.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -260,8 +1170,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGEngine.dir\build.make CMakeFiles/MyRPGEngine.dir/src/main.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyRPGGame.dir\build.make CMakeFiles/MyRPGGame.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameEngineExecutable.dir\build.make CMakeFiles/GameEngineExecutable.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -272,8 +1181,122 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... MyRPGEngine
-	@echo ... MyRPGGame
+	@echo ... GameEngineExecutable
+	@echo ... gameengine
+	@echo ... libraries/graphicslib/src/Camera.obj
+	@echo ... libraries/graphicslib/src/Camera.i
+	@echo ... libraries/graphicslib/src/Camera.s
+	@echo ... libraries/graphicslib/src/Mesh.obj
+	@echo ... libraries/graphicslib/src/Mesh.i
+	@echo ... libraries/graphicslib/src/Mesh.s
+	@echo ... libraries/graphicslib/src/Renderer.obj
+	@echo ... libraries/graphicslib/src/Renderer.i
+	@echo ... libraries/graphicslib/src/Renderer.s
+	@echo ... libraries/graphicslib/src/Shader.obj
+	@echo ... libraries/graphicslib/src/Shader.i
+	@echo ... libraries/graphicslib/src/Shader.s
+	@echo ... libraries/graphicslib/src/Texture.obj
+	@echo ... libraries/graphicslib/src/Texture.i
+	@echo ... libraries/graphicslib/src/Texture.s
+	@echo ... libraries/graphicslib/src/Window.obj
+	@echo ... libraries/graphicslib/src/Window.i
+	@echo ... libraries/graphicslib/src/Window.s
+	@echo ... libraries/soloud/src/backend/wasapi/soloud_wasapi.obj
+	@echo ... libraries/soloud/src/backend/wasapi/soloud_wasapi.i
+	@echo ... libraries/soloud/src/backend/wasapi/soloud_wasapi.s
+	@echo ... libraries/soloud/src/core/soloud.obj
+	@echo ... libraries/soloud/src/core/soloud.i
+	@echo ... libraries/soloud/src/core/soloud.s
+	@echo ... libraries/soloud/src/core/soloud_audiosource.obj
+	@echo ... libraries/soloud/src/core/soloud_audiosource.i
+	@echo ... libraries/soloud/src/core/soloud_audiosource.s
+	@echo ... libraries/soloud/src/core/soloud_bus.obj
+	@echo ... libraries/soloud/src/core/soloud_bus.i
+	@echo ... libraries/soloud/src/core/soloud_bus.s
+	@echo ... libraries/soloud/src/core/soloud_core_3d.obj
+	@echo ... libraries/soloud/src/core/soloud_core_3d.i
+	@echo ... libraries/soloud/src/core/soloud_core_3d.s
+	@echo ... libraries/soloud/src/core/soloud_core_basicops.obj
+	@echo ... libraries/soloud/src/core/soloud_core_basicops.i
+	@echo ... libraries/soloud/src/core/soloud_core_basicops.s
+	@echo ... libraries/soloud/src/core/soloud_core_faderops.obj
+	@echo ... libraries/soloud/src/core/soloud_core_faderops.i
+	@echo ... libraries/soloud/src/core/soloud_core_faderops.s
+	@echo ... libraries/soloud/src/core/soloud_core_filterops.obj
+	@echo ... libraries/soloud/src/core/soloud_core_filterops.i
+	@echo ... libraries/soloud/src/core/soloud_core_filterops.s
+	@echo ... libraries/soloud/src/core/soloud_core_getters.obj
+	@echo ... libraries/soloud/src/core/soloud_core_getters.i
+	@echo ... libraries/soloud/src/core/soloud_core_getters.s
+	@echo ... libraries/soloud/src/core/soloud_core_setters.obj
+	@echo ... libraries/soloud/src/core/soloud_core_setters.i
+	@echo ... libraries/soloud/src/core/soloud_core_setters.s
+	@echo ... libraries/soloud/src/core/soloud_core_voicegroup.obj
+	@echo ... libraries/soloud/src/core/soloud_core_voicegroup.i
+	@echo ... libraries/soloud/src/core/soloud_core_voicegroup.s
+	@echo ... libraries/soloud/src/core/soloud_core_voiceops.obj
+	@echo ... libraries/soloud/src/core/soloud_core_voiceops.i
+	@echo ... libraries/soloud/src/core/soloud_core_voiceops.s
+	@echo ... libraries/soloud/src/core/soloud_fader.obj
+	@echo ... libraries/soloud/src/core/soloud_fader.i
+	@echo ... libraries/soloud/src/core/soloud_fader.s
+	@echo ... libraries/soloud/src/core/soloud_fft.obj
+	@echo ... libraries/soloud/src/core/soloud_fft.i
+	@echo ... libraries/soloud/src/core/soloud_fft.s
+	@echo ... libraries/soloud/src/core/soloud_fft_lut.obj
+	@echo ... libraries/soloud/src/core/soloud_fft_lut.i
+	@echo ... libraries/soloud/src/core/soloud_fft_lut.s
+	@echo ... libraries/soloud/src/core/soloud_file.obj
+	@echo ... libraries/soloud/src/core/soloud_file.i
+	@echo ... libraries/soloud/src/core/soloud_file.s
+	@echo ... libraries/soloud/src/core/soloud_filter.obj
+	@echo ... libraries/soloud/src/core/soloud_filter.i
+	@echo ... libraries/soloud/src/core/soloud_filter.s
+	@echo ... libraries/soloud/src/core/soloud_misc.obj
+	@echo ... libraries/soloud/src/core/soloud_misc.i
+	@echo ... libraries/soloud/src/core/soloud_misc.s
+	@echo ... libraries/soloud/src/core/soloud_queue.obj
+	@echo ... libraries/soloud/src/core/soloud_queue.i
+	@echo ... libraries/soloud/src/core/soloud_queue.s
+	@echo ... libraries/soloud/src/core/soloud_thread.obj
+	@echo ... libraries/soloud/src/core/soloud_thread.i
+	@echo ... libraries/soloud/src/core/soloud_thread.s
+	@echo ... libraries/soloud/src/filter/soloud_bassboostfilter.obj
+	@echo ... libraries/soloud/src/filter/soloud_bassboostfilter.i
+	@echo ... libraries/soloud/src/filter/soloud_bassboostfilter.s
+	@echo ... libraries/soloud/src/filter/soloud_biquadresonantfilter.obj
+	@echo ... libraries/soloud/src/filter/soloud_biquadresonantfilter.i
+	@echo ... libraries/soloud/src/filter/soloud_biquadresonantfilter.s
+	@echo ... libraries/soloud/src/filter/soloud_dcremovalfilter.obj
+	@echo ... libraries/soloud/src/filter/soloud_dcremovalfilter.i
+	@echo ... libraries/soloud/src/filter/soloud_dcremovalfilter.s
+	@echo ... libraries/soloud/src/filter/soloud_duckfilter.obj
+	@echo ... libraries/soloud/src/filter/soloud_duckfilter.i
+	@echo ... libraries/soloud/src/filter/soloud_duckfilter.s
+	@echo ... libraries/soloud/src/filter/soloud_echofilter.obj
+	@echo ... libraries/soloud/src/filter/soloud_echofilter.i
+	@echo ... libraries/soloud/src/filter/soloud_echofilter.s
+	@echo ... libraries/soloud/src/filter/soloud_eqfilter.obj
+	@echo ... libraries/soloud/src/filter/soloud_eqfilter.i
+	@echo ... libraries/soloud/src/filter/soloud_eqfilter.s
+	@echo ... libraries/soloud/src/filter/soloud_fftfilter.obj
+	@echo ... libraries/soloud/src/filter/soloud_fftfilter.i
+	@echo ... libraries/soloud/src/filter/soloud_fftfilter.s
+	@echo ... libraries/soloud/src/filter/soloud_flangerfilter.obj
+	@echo ... libraries/soloud/src/filter/soloud_flangerfilter.i
+	@echo ... libraries/soloud/src/filter/soloud_flangerfilter.s
+	@echo ... libraries/soloud/src/filter/soloud_freeverbfilter.obj
+	@echo ... libraries/soloud/src/filter/soloud_freeverbfilter.i
+	@echo ... libraries/soloud/src/filter/soloud_freeverbfilter.s
+	@echo ... libraries/soloud/src/filter/soloud_lofifilter.obj
+	@echo ... libraries/soloud/src/filter/soloud_lofifilter.i
+	@echo ... libraries/soloud/src/filter/soloud_lofifilter.s
+	@echo ... libraries/soloud/src/filter/soloud_robotizefilter.obj
+	@echo ... libraries/soloud/src/filter/soloud_robotizefilter.i
+	@echo ... libraries/soloud/src/filter/soloud_robotizefilter.s
+	@echo ... libraries/soloud/src/filter/soloud_waveshaperfilter.obj
+	@echo ... libraries/soloud/src/filter/soloud_waveshaperfilter.i
+	@echo ... libraries/soloud/src/filter/soloud_waveshaperfilter.s
 	@echo ... src/Behaviours.obj
 	@echo ... src/Behaviours.i
 	@echo ... src/Behaviours.s

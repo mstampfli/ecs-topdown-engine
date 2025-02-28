@@ -1,2 +1,0 @@
-C:\msys64\ucrt64\bin\ar.exe qc lib\libMyRPGEngine.a CMakeFiles/MyRPGEngine.dir/src/Behaviours.cpp.obj CMakeFiles/MyRPGEngine.dir/src/DeltaTime.cpp.obj CMakeFiles/MyRPGEngine.dir/src/Managers.cpp.obj CMakeFiles/MyRPGEngine.dir/src/Systems.cpp.obj CMakeFiles/MyRPGEngine.dir/src/main.cpp.obj
-C:\msys64\ucrt64\bin\ranlib.exe lib\libMyRPGEngine.a
