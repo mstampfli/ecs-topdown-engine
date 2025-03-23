@@ -41,9 +41,8 @@ public:
 
 protected:
     Window* window;
+    std::unordered_map<int, bool> previousInputs;
     std::unordered_map<int, bool> currentInputs;
-    std::unordered_set<int> newInputs;
-    std::unordered_set<int> endedInputs;
 
     void storeKeyInputs(int key, int action);
     static void keyCallBack(GLFWwindow* window, int key, int scancode, int action, int mods);

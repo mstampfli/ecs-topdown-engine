@@ -16,9 +16,12 @@ void System::initialize(EntityManager* em, EventBus* eb) {
 
 void MovementSystem::update(float dt) {
     for (auto& entity : entityManager->getAllEntities()) {
-        if (entityManager->getPosition(entity)) {
-            entityManager->getPosition(entity)->x += entityManager->getVelocity(entity)->vx * dt;
-            entityManager->getPosition(entity)->y += entityManager->getVelocity(entity)->vy * dt;
+        Velocity* vel = entityManager->getVelocity(entity);
+        Position* pos = entityManager->getPosition(entity);
+
+        if (vel && pos) {
+            pos->x += vel->vx * dt;
+            pos->y += vel->vy * dt;
         }
     }
 }
@@ -64,6 +67,7 @@ void StatusSystem::initialize(EntityManager* em, EventBus* eb) {
 void StatusSystem::addStatus(StatusAppliedEvent* status) {
     std::cout << "Adding status: " << status << std::endl;
     activeStatuses.push_back(status);
+    handleStatusUpdate(status);
 }
 
 bool StatusSystem::isStatusEqual(const StatusAppliedEvent* status1, const StatusAppliedEvent* status2) {

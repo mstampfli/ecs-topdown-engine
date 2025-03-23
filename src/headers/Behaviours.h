@@ -13,7 +13,7 @@ public:
     virtual ~EntityBehaviour() = default; // Ensure proper cleanup
     virtual void initialize(EntityManager* em); 
 
-    EntityBehaviour(EntityManager* em) { initialize(em); }
+    EntityBehaviour() = default;
 protected:
     EntityManager* entityManager = nullptr;
 };

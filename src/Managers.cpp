@@ -205,43 +205,45 @@ void InputManager::keyCallBack(GLFWwindow* window, int key, int scancode, int ac
 
 void InputManager::storeKeyInputs(int key, int action) {
     if (action == GLFW_PRESS) {
-        if (!currentInputs[key]) {
-            currentInputs[key] = true;
-            newInputs.insert(key);
-
-            if (endedInputs.count(key) > 0) endedInputs.erase(key);
-        } 
+        currentInputs[key] = true; 
     }
     else if (action == GLFW_RELEASE) {
         currentInputs[key] = false;
-        endedInputs.insert(key);  
-
-        if (newInputs.count(key) > 0) newInputs.erase(key);
     }
 }
 
 bool InputManager::isKeyDown(int key) {
-    if (currentInputs.count(key) > 0) {
+    if (currentInputs.count(key) > 0 && previousInputs.count(key) > 0) {
         return currentInputs.at(key);
     }
     return false;
 }
 
 bool InputManager::isKeyUp(int key) {
-    if (currentInputs.count(key) > 0) {
+    if (currentInputs.count(key) > 0 && previousInputs.count(key) > 0) {
         return !currentInputs.at(key);
     }
     return true;
 }
 
 bool InputManager::isKeyPressed(int key) {
-    return newInputs.count(key) > 0;
+    if (currentInputs.count(key) > 0 && previousInputs.count(key) > 0) {
+        return currentInputs[key] && !previousInputs[key]; 
+    }
+    return false;
+    
+
 }
 
 bool InputManager::isKeyReleased(int key) {
-    return endedInputs.count(key) > 0;
+    if (currentInputs.count(key) > 0 && previousInputs.count(key) > 0) {
+        return !currentInputs[key] && previousInputs[key]; 
+    }  
+    return false;
+    
 }
 
 void InputManager::update() {
+    previousInputs = currentInputs;
     glfwPollEvents();
 }
