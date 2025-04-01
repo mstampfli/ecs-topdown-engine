@@ -33,6 +33,7 @@ class StatusSystem : public System {
 public:
     void update(float dt) override;
     void initialize(EntityManager* em, EventBus* eb) override;
+    void registerStatus(std::type_index status, std::function<void(StatusAppliedEvent*)> handler);
     const std::vector<StatusAppliedEvent*>& getActiveStatuses() const;
     virtual ~StatusSystem() = default;
 
@@ -42,7 +43,8 @@ protected:
     void removeStatus(StatusAppliedEvent* status);
     std::vector<StatusAppliedEvent*> activeStatuses;
     bool isStatusEqual(const StatusAppliedEvent* status1, const StatusAppliedEvent* status2);
-    virtual void handleStatusUpdate(StatusAppliedEvent* status) = 0;
+    
+    std::unordered_map <std::type_index, std::function<void(StatusAppliedEvent*)>> statusHandlers;
 
 };
 

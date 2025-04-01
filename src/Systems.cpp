@@ -26,6 +26,10 @@ void MovementSystem::update(float dt) {
     }
 }
 
+void StatusSystem::registerStatus(std::type_index status, std::function<void(StatusAppliedEvent*)> handler) {
+    statusHandlers[status] = handler;
+}
+
 void StatusSystem::update(float dt) {
     for (auto it = activeStatuses.begin(); it != activeStatuses.end();) {
         
@@ -39,7 +43,9 @@ void StatusSystem::update(float dt) {
 
         // Apply effect if enough time has passed
         if (status->timeSinceLastTick >= status->interval || status->timeSinceLastTick == 0.0f) {
-            handleStatusUpdate(status);
+            if (statusHandlers.count(std::type_index(typeid(*status))) > 0) {
+                statusHandlers[std::type_index(typeid(*status))](status);
+            }
         }
 
         // Remove effect if expired
@@ -67,7 +73,9 @@ void StatusSystem::initialize(EntityManager* em, EventBus* eb) {
 void StatusSystem::addStatus(StatusAppliedEvent* status) {
     std::cout << "Adding status: " << status << std::endl;
     activeStatuses.push_back(status);
-    handleStatusUpdate(status);
+    if (statusHandlers.count(std::type_index(typeid(*status))) > 0) {
+        statusHandlers[std::type_index(typeid(*status))](status);
+    }
 }
 
 bool StatusSystem::isStatusEqual(const StatusAppliedEvent* status1, const StatusAppliedEvent* status2) {

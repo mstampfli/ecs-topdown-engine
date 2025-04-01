@@ -194,6 +194,10 @@ void EntityManager::setVelocity(Entity entity, const Velocity& vel) {
 
 void InputManager::initialize(Window* w) {
     window = w;
+    for (int key = 0; key <= GLFW_KEY_LAST; ++key) {
+        currentInputs[key] = false;
+        previousInputs[key] = false;
+    }    
     glfwSetWindowUserPointer(window->getGLFWwindow(), this);
     glfwSetKeyCallback(window->getGLFWwindow(), keyCallBack);
 }   
@@ -231,8 +235,6 @@ bool InputManager::isKeyPressed(int key) {
         return currentInputs[key] && !previousInputs[key]; 
     }
     return false;
-    
-
 }
 
 bool InputManager::isKeyReleased(int key) {
@@ -240,7 +242,6 @@ bool InputManager::isKeyReleased(int key) {
         return !currentInputs[key] && previousInputs[key]; 
     }  
     return false;
-    
 }
 
 void InputManager::update() {
