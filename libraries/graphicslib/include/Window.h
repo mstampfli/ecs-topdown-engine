@@ -1,59 +1,39 @@
 #ifndef WINDOW_H
 #define WINDOW_H
 
-#include "../../glad/include/glad/glad.h"
-#include "../../glfw/include/GLFW/glfw3.h"
-#include <iostream>
-#include <functional>
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
 
 class Window {
 public:
-    bool isVsyncEnabled = false;
-    float timeScale = 1;
-
-    Window(void);
+    Window();
     ~Window();
 
-    void run();
-    void stop();
-    void close();
+    // Create a window with the specified dimensions and title.
     void open(int width, int height, const char* title);
+    // Initialize OpenGL via GLAD.
     int initializeOpenGL();
+    // Run a basic loop (if needed; you may handle the loop externally).
+    void run();
+    // Close and clean up the window.
+    void close();
 
-    void enableBlending();
-    void disableBlending();
-
-    bool shouldClose() const;
+    // Swap buffers and clear the screen.
     void swapBuffers() const;
-    bool isKeyPressed(int key) const;
-
-    void setFramerate(int newFramerate);
-
-    void toOpenGLCoordinates(float& x, float& y);
-    void toOpenGLSize(float& w, float& h);
-
-    void setBackgroundColor(float r, float g, float b);
     void clearScreen();
+    // Enable alpha blending.
+    void enableBlending();
 
-    GLFWwindow* getGLFWwindow() {
-        return window;
-    }
+    // Retrieve the underlying GLFWwindow.
+    GLFWwindow* getGLFWwindow();
 
-    std::function<void(void)> updateFunction;
-    
+    // Get window dimensions.
+    int getWidth() const;
+    int getHeight() const;
 
-protected:
+private:
     GLFWwindow* window;
     int width, height;
-
-    int framerate = 0;
-    float timeInterval = 1.0f / framerate;
-    float t1;
-    float t2;
-    float deltaTime;
-
-    bool isActive = false;
-    bool isRunning = false;
 };
 
 #endif

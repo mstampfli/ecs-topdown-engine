@@ -229,19 +229,154 @@ CMakeFiles/gameengine.dir/src/Managers.cpp.obj: \
  C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/graphicslib/include/Shader.h \
  C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glad/include/glad/glad.h \
  C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glad/include/KHR/khrplatform.h \
- C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glfw/include/GLFW/glfw3.h \
- C:/msys64/ucrt64/include/c++/13.2.0/fstream \
- C:/msys64/ucrt64/include/c++/13.2.0/istream \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/istream.tcc \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/codecvt.h \
- C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/basic_file.h \
- C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++io.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc \
- C:/msys64/ucrt64/include/c++/13.2.0/iostream \
  C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/graphicslib/include/Window.h \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glfw/include/GLFW/glfw3.h \
  C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/graphicslib/include/Texture.h \
  C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/graphicslib/include/Renderer.h \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/glm.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/_fixes.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/setup.hpp \
+ C:/msys64/ucrt64/include/c++/13.2.0/cassert \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/simd/platform.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/climits \
+ C:/msys64/ucrt64/include/c++/13.2.0/cfloat \
+ C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/float.h \
+ C:/msys64/ucrt64/include/float.h \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/fwd.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/qualifier.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/setup.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/vec2.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_bool2.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_vec2.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_vec2.inl \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/compute_vector_relational.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_bool2_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_float2.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_float2_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_double2.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_double2_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_int2.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_int2_sized.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/scalar_int_sized.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/setup.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_uint2.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_uint2_sized.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/scalar_uint_sized.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/vec3.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_bool3.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_vec3.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_vec3.inl \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/compute_vector_decl.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/_vectorize.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_bool3_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_float3.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_float3_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_double3.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_double3_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_int3.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_int3_sized.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_uint3.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_uint3_sized.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/vec4.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_bool4.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_vec4.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_vec4.inl \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_bool4_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_float4.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_float4_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_double4.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_double4_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_int4.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_int4_sized.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_uint4.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/vector_uint4_sized.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/mat2x2.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_double2x2.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_mat2x2.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_mat2x2.inl \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/matrix.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/mat2x3.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_double2x3.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_mat2x3.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_mat2x3.inl \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_double2x3_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_float2x3.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_float2x3_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/mat2x4.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_double2x4.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_mat2x4.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_mat2x4.inl \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_double2x4_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_float2x4.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_float2x4_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/mat3x2.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_double3x2.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_mat3x2.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_mat3x2.inl \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_double3x2_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_float3x2.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_float3x2_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/mat3x3.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_double3x3.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_mat3x3.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_mat3x3.inl \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/common.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/func_common.inl \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/vector_relational.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/func_vector_relational.inl \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/compute_common.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_vec1.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_vec1.inl \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_double3x3_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_float3x3.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_float3x3_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/mat3x4.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_double3x4.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_mat3x4.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_mat3x4.inl \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_double3x4_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_float3x4.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_float3x4_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/mat4x2.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_double4x2.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_mat4x2.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_mat4x2.inl \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_double4x2_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_float4x2.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_float4x2_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/mat4x3.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_double4x3.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_mat4x3.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_mat4x3.inl \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_double4x3_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_float4x3.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_float4x3_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/mat4x4.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_double4x4.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_mat4x4.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_mat4x4.inl \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/geometric.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/func_geometric.inl \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/exponential.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/func_exponential.inl \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_double4x4_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_float4x4.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_float4x4_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/func_matrix.inl \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_double2x2_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_float2x2.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/ext/matrix_float2x2_precision.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/trigonometric.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/func_trigonometric.inl \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/packing.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/func_packing.inl \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_half.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/type_half.inl \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/integer.hpp \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/glm/detail/func_integer.inl \
  C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/graphicslib/include/Window.h \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/graphicslib/include/Shader.h \
+ C:/Users/ur2ba/OneDrive/Desktop/ECS-OOP-TopDown-GameEngine/libraries/graphicslib/include/Texture.h \
  C:\Users\ur2ba\OneDrive\Desktop\ECS-OOP-TopDown-GameEngine\src\headers/DeltaTime.h \
  C:/msys64/ucrt64/include/c++/13.2.0/chrono \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/chrono.h \
@@ -249,6 +384,8 @@ CMakeFiles/gameengine.dir/src/Managers.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/ctime \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/parse_numbers.h \
  C:/msys64/ucrt64/include/c++/13.2.0/sstream \
+ C:/msys64/ucrt64/include/c++/13.2.0/istream \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/istream.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/sstream.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/chrono_io.h \
  C:/msys64/ucrt64/include/c++/13.2.0/iomanip \
@@ -256,10 +393,12 @@ CMakeFiles/gameengine.dir/src/Managers.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_facets_nonio.h \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/time_members.h \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/messages_members.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/codecvt.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_facets_nonio.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_conv.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/quoted_string.h \
  C:/msys64/ucrt64/include/c++/13.2.0/format \
  C:/msys64/ucrt64/include/c++/13.2.0/charconv \
  C:/msys64/ucrt64/include/c++/13.2.0/span \
- C:/msys64/ucrt64/include/c++/13.2.0/variant
+ C:/msys64/ucrt64/include/c++/13.2.0/variant \
+ C:/msys64/ucrt64/include/c++/13.2.0/iostream

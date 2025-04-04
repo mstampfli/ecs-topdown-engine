@@ -1,31 +1,25 @@
 #ifndef SHADER_H
 #define SHADER_H
 
-#include "../../glad/include/glad/glad.h"
-#include "../../glfw/include/GLFW/glfw3.h"
-#include <fstream>
-#include <iostream>
+#include <glad/glad.h>
+#include <string>
 
-class Shader{
-    public:
-    GLuint shaderProgram;
-
-    Shader(const char* vertexShaderPath, const char* fragmentShaderPath);
+class Shader {
+public:
+    // Create a shader program from vertex and fragment shader file paths.
+    Shader(const char* vertexPath, const char* fragmentPath);
     ~Shader();
 
+    // Activate the shader program.
     void use();
-
+    // Get the location of a uniform variable.
     GLint getUniform(const char* uniformName);
-    void setUniform(GLint uniform, int value);
 
-    void setTexture(int slot);
-
-    private:
-    const char* readShaderFile(const char* filePath);
+    GLuint shaderProgram; // Exposed for simplicity.
+private:
+    std::string readShaderFile(const char* filePath);
     GLuint compileShader(const char* source, GLenum shaderType);
     GLuint linkProgram(GLuint vertexShader, GLuint fragmentShader);
-    GLint textureUniform;
-    GLint useTextureUniform;
 };
 
 #endif

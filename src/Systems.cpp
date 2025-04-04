@@ -7,6 +7,7 @@
 #include <memory>
 #include <algorithm>
 #include <typeinfo>
+#include <iostream>
 
 
 void System::initialize(EntityManager* em, EventBus* eb) {

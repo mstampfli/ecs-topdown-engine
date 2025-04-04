@@ -1,56 +1,77 @@
 #ifndef RENDERER_H
 #define RENDERER_H
 
-#include "../../glad/include/glad/glad.h"
 #include <vector>
+#include <string>
+#include "../../glm/glm.hpp"
 #include "Window.h"
+#include "Shader.h"
+#include "Texture.h"
 
-struct vec2 {
-    float x, y;
+// Data for each instance (textured quad) to be drawn.
+struct RenderInstanceData {
+    glm::mat4 model;   // Model matrix (translation, rotation, scale)
+    glm::vec4 color;   // Color tint (RGBA)
+    float textureID;   // Texture slot index (stored as float for the shader)
+    glm::vec3 pad;     // Padding for alignment
 };
 
-struct vec3 {
-    float x, y, z;
-};
+class Renderer {
+public:
+    // Attach the renderer to a window, using the given shader paths (defaults provided).
+    Renderer(Window* window, const char* vertexShaderPath = "texture.vert", const char* fragmentShaderPath = "texture.frag");
+    virtual ~Renderer();
 
-struct vec4 {
-    float r, g, b, a;
-};
-
-
-struct RenderMetaData {
-    vec3 position;  // Position (X, Y, Z)
-    float padding1;      // Padding for 16-byte alignment
-    vec3 scale;     // Scale (Width, Height, Depth)
-    float padding2;
-    vec4 color;     // RGBA color
-    uint32_t texture;    // Texture slot or handle
-    float padding3[3];   // Extra padding for alignment
-};
-
-
-class Renderer{
-    public:
-    Renderer(Window* window);
-    ~Renderer();
-
+    // Initialize VAO/VBOs, shader, and instance buffer.
     void initialize();
 
+    // Clear any queued instances.
     void beginDraw();
+
+    // Upload instance data, bind textures, and perform the instanced draw call.
     void endDraw();
 
-    void drawRectangle(vec3 position, vec3 scale, vec4 color, uint32_t textureID);
+    // Low-level draw function: queue a textured quad.
+    void drawRectangle(const glm::vec3& position,
+                       const glm::vec2& scale,
+                       float rotation,
+                       const glm::vec4& color,
+                       uint32_t textureID);
 
-    protected:
+    // High-level draw function: queue a textured quad using a Texture pointer.
+    void drawTextureEx(Texture* texture,
+                       const glm::vec3& position,
+                       const glm::vec2& scale,
+                       float rotation,
+                       const glm::vec4& tint);
+
+    // Change the shader by providing new vertex and fragment shader paths.
+    void setShader(const char* vertexShaderPath, const char* fragmentShaderPath);
+
+protected:
+    // Helper to get a texture slot index for a given texture.
+    uint32_t getTextureSlot(Texture* texture);
+
     Window* windowHandle;
+    Shader* shader; // Shader used for rendering.
+    
+    GLuint vao;         // Vertex Array Object.
+    GLuint vertexVBO;   // VBO for quad vertex data.
+    GLuint elementEBO;  // Element buffer for quad indices.
+    GLuint instanceVBO; // VBO for per-instance data.
 
-    GLuint ssbo;
-    GLuint vao;
-    int MAX_INSTANCES;
-    int vertexCount;
-    std::vector<RenderMetaData> instanceData; // Fill this with data for each instance
+    int MAX_INSTANCES;  // Maximum instances per frame.
+    int vertexCount;    // Number of indices to draw per quad.
+
+    // Collected instance data.
+    std::vector<RenderInstanceData> instanceData;
+
+    // Texture slots mapping (max 16 textures).
+    std::vector<Texture*> textureSlots;
+
+    // Store the current shader paths.
+    std::string currentVertexShaderPath;
+    std::string currentFragmentShaderPath;
 };
-
-void toOpenGLColor(float& r, float& g, float& b, float& a);
 
 #endif
